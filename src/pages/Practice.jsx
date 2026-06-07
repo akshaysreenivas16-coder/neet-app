@@ -42,7 +42,7 @@ function Practice(){
             const { data } = await supabase
                 .from('questions')
                 .select('*')
-                .eq('subject', subject)
+                .eq('subject', subject.toLowerCase())
                 .eq('chapter', chapter)
             setQuestions(data)
             setloading(false)

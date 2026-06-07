@@ -12,7 +12,7 @@ function ChapterSelect(){
             const {data} = await supabase
             .from('questions')
             .select('chapter')
-            .eq('subject', subject)
+            .eq('subject', subject.toLowerCase())
 
              console.log('data:', data)
              console.log('subject:', subject)
