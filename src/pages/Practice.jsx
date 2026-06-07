@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
 import supabase from "../supabase";
 import QuestionCard from '../components/QuestionCard'
-import { Navigate, useNavigate} from "react-router-dom";
+import { Navigate, useNavigate, useSearchParams} from "react-router-dom";
 
 function Practice(){
+    const navigate=useNavigate()
+    const [searchParams]= useSearchParams() // to read the values from url 
+    const subject = searchParams.get('subject')
+    const chapter = searchParams.get('chapter')
+
     const [questions, setQuestions] = useState([])
     const [currentIndex, setCurrentIndex] = useState(0)
     const [selected, setSelected]= useState(null)
@@ -11,8 +16,6 @@ function Practice(){
     const [score, setScore]= useState(0)
     const [loading, setloading]=useState(true)
     const [user, setUser]=useState(null)
-    const navigate=useNavigate()
-
 
     //logout
     async function handleLogout(){
@@ -33,17 +36,19 @@ function Practice(){
         checkUser()
     },[])
 
-    //question fecting fromdatabase
+    //question fetching from database
     useEffect(() => {
         async function fetchQuestions(){
             const { data } = await supabase
                 .from('questions')
                 .select('*')
+                .eq('subject', subject)
+                .eq('chapter', chapter)
             setQuestions(data)
             setloading(false)
         }
         fetchQuestions()
-    }, [])
+    }, [subject, chapter])
 
     //answer checking and scoring
     function checkAnswer(option) {
