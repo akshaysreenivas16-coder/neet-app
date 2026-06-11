@@ -26,3 +26,6 @@ Login -> subjectSelect -> chapterSelect -> practice
 ## gitignore
 - .env (url & anon keys of supbase) 
 
+## csv
+- questions.csv (contains questions for each chapters)
+

@@ -54,10 +54,51 @@ function Practice(){
     function checkAnswer(option) {
         setSelected(option)
         setAnswered(true)
-        if(option === questions[currentIndex].correct_option){
+        const isCorrect = option === questions[currentIndex].correct_option
+        if (isCorrect){
         setScore(prev => prev + 1)
         }
+        saveProgress(isCorrect)
     }
+
+  async function saveProgress(isCorrect) {
+    const { data } = await supabase
+        .from('user_progress')
+        .select('*')
+        .eq('user_id', user.id)
+        .eq('subject', subject)
+        .eq('chapter', chapter)
+        .single()
+
+    if (data) {
+        const newAttempted = data.attempted + 1
+        const newCorrect = data.correct + (isCorrect ? 1 : 0)
+        const newAccuracy = (newCorrect / newAttempted) * 100
+
+        await supabase
+            .from('user_progress')
+            .update({
+                attempted: newAttempted,
+                correct: newCorrect,
+                accuracy: newAccuracy,
+                last_attempted: new Date()
+            })
+            .eq('user_id', user.id)
+            .eq('subject', subject)
+            .eq('chapter', chapter)
+    } else {
+        await supabase
+            .from('user_progress')
+            .insert({
+                user_id: user.id,
+                subject: subject,
+                chapter: chapter,
+                attempted: 1,
+                correct: isCorrect ? 1 : 0,
+                accuracy: isCorrect ? 100 : 0
+            })
+    }
+}
 
 
     //last page showing final score
