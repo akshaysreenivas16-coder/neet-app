@@ -17,12 +17,7 @@ function Practice(){
     const [loading, setloading]=useState(true)
     const [user, setUser]=useState(null)
 
-    //logout
-    async function handleLogout(){
-        await supabase.auth.signOut()
-        navigate("/")
-    }
-
+    
     //authorizing for only signuped users
     useEffect(()=>{ 
         async function checkUser() {
@@ -61,7 +56,7 @@ function Practice(){
         saveProgress(isCorrect)
     }
 
-  async function saveProgress(isCorrect) {
+    async function saveProgress(isCorrect){
     const { data } = await supabase
         .from('user_progress')
         .select('*')
@@ -170,9 +165,6 @@ function Practice(){
                         setAnswered(false)
                     }}>Next</button>
                 )}
-
-                <button onClick={handleLogout}>Logout</button>
-               
                 </>
             )}
         </div>

@@ -17,7 +17,7 @@ function Login(){
         if(error){
             setMessage(error.message)
         }else{
-            navigate('/subject')
+            navigate('/home')
         }
     }
 
