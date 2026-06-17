@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import supabase from "../supabase";
 import QuestionCard from '../components/QuestionCard'
-import { Navigate, useNavigate, useSearchParams} from "react-router-dom";
+import { useNavigate, useSearchParams} from "react-router-dom";
 
 function Practice(){
     const navigate=useNavigate()
@@ -15,21 +15,6 @@ function Practice(){
     const [answered, setAnswered]= useState(false)
     const [score, setScore]= useState(0)
     const [loading, setloading]=useState(true)
-    const [user, setUser]=useState(null)
-
-    
-    //authorizing for only signuped users
-    useEffect(()=>{ 
-        async function checkUser() {
-            const {data} = await supabase.auth.getSession()
-            if(!data.session){
-                navigate("/")
-            }else{
-                setUser(data.session.user)
-            }
-        }
-        checkUser()
-    },[])
 
     //question fetching from database
     useEffect(() => {
@@ -56,7 +41,11 @@ function Practice(){
         saveProgress(isCorrect)
     }
 
+    //saving progress
     async function saveProgress(isCorrect){
+    const { data:{user} } = await supabase.auth.getUser()
+    if(!user) return
+
     const { data } = await supabase
         .from('user_progress')
         .select('*')
@@ -96,7 +85,7 @@ function Practice(){
 }
 
 
-    //last page showing final score
+    //final score screen
    if(!loading && currentIndex >= questions.length){
     return(
         <div>
@@ -114,8 +103,8 @@ function Practice(){
                 setSelected(null)
                 setAnswered(false)
             }}>
-                Try Again
-            </button>
+                Try Again</button>
+              <button onClick={() => navigate('/home')}>Back to Home</button>
         </div>
         )
     }

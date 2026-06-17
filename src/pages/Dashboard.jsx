@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import supabase from "../supabase";
 
 function Dashboard(){
     const navigate = useNavigate()
-    const [user, setuser] = useState(null)
     const [progress, setProgress] = useState([])
     const subjects = ["Biology", "Chemistry", "Physics"]
-    const [loading, setLoading]= useState(true)
 
 
     useEffect(()=>{
@@ -21,7 +19,7 @@ function Dashboard(){
             setProgress(data)
         }
         fetchProgress()
-    },[user])
+    },[])
 
     function getSubjectAccuracy(subject){
         const rows = progress.filter(row => row.subject.toLowerCase() === subject.toLowerCase())
@@ -60,6 +58,7 @@ function Dashboard(){
                 )
             })}
             </div>
+            <button onClick={()=>navigate('/home')} style={{marginTop:'20px'}}>back to home</button>
         </div>
     )
 }

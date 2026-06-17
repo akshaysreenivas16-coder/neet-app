@@ -1,11 +1,10 @@
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import supabase from "../supabase";
 
 function SubjectDashboard(){
     const navigate =  useNavigate()
     const {subject} = useParams()
-    const [user, setuser] =  useState(null)
     const [chapters, setChapters] = useState([])
 
 

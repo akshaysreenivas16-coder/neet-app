@@ -14,6 +14,7 @@ function SubjectSelect(){
                     {subject}
                 </button>
             ))}
+               <button onClick={()=>navigate('/home')} style={{marginTop:'20px', display:"block"}}>back to home</button>
         </div>
     )
 }

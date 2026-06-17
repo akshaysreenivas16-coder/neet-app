@@ -14,9 +14,6 @@ function ChapterSelect(){
             .select('chapter')
             .eq('subject', subject.toLowerCase())
 
-             console.log('data:', data)
-             console.log('subject:', subject)
-
         const unique = [...new Set(data.map(row =>row.chapter))]
         setChapters(unique)
         }
@@ -34,6 +31,7 @@ return(
                     {chapter}
                 </button>
             ))}
+             <button onClick={()=>navigate('/subject')} style={{marginTop:'20px', display:"block"}}>back</button>
         </div>
     );
 }
