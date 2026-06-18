@@ -1,5 +1,5 @@
 ## App flow
-Login -> subjectSelect -> chapterSelect -> practice
+Login -> home -> start paractice -> subjectSelect -> chapterSelect -> practice
 
 ## Pages
 - Signup.jsx
@@ -7,6 +7,9 @@ Login -> subjectSelect -> chapterSelect -> practice
 - Practice.jsx
 - SubjectSelect.jsx
 - chapterSelect.jsx
+- Dashboard.jsx
+- subjectDashboard.jsx
+- home.jsx
 
 ## Component
 - Questioncard.jsx

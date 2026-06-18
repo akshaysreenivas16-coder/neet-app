@@ -39,6 +39,7 @@ function Practice(){
         setScore(prev => prev + 1)
         }
         saveProgress(isCorrect)
+        updateStreak()
     }
 
     //saving progress
@@ -84,6 +85,44 @@ function Practice(){
     }
 }
 
+//streak
+async function updateStreak() {
+    const {data:{user}} = await supabase.auth.getUser()
+    if(!user) return
+
+    const today = new Date().toISOString().split('T')[0]
+
+    const {data} = await supabase 
+        .from('user_streaks')
+        .select('*')
+        .eq('user_id', user.id)
+        .single()
+
+    if(!data){
+        await supabase.from('user_streaks').insert({
+            user_id : user.id,
+            current_streak : 1,
+            last_practiced : today
+        })
+    }else if(data.last_practiced === today){
+        return
+    }else{
+        const yestarday = new Date()
+        yestarday.setDate(yestarday.getDate() -1)
+        const yestardayStr = yestarday.toISOString().split('T')[0]
+
+        const newStreak = data.last_practiced === yestardayStr
+            ? data.current_streak + 1
+            :1
+
+        await supabase.from('user_streaks').update({
+            current_streak: newStreak,
+            last_practiced: today
+        }).eq('user_id', user.id)
+
+    }
+
+}
 
     //final score screen
    if(!loading && currentIndex >= questions.length){
