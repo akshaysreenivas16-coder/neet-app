@@ -23,13 +23,13 @@ function SubjectDashboard(){
     },[subject])
 
     function getColor(accuracy){
-        if (accuracy >= 80) return 'green'
+        if (accuracy >= 70) return 'green'
         if (accuracy >= 50) return 'orange'
         return 'red'
     }
 
     function getLabel(accuracy){
-        if (accuracy >= 80) return 'Strong 💪'
+        if (accuracy >= 70) return 'Strong 💪'
         if (accuracy >= 50) return 'Needs work 📚'
         return 'weak ⚠️'
     }

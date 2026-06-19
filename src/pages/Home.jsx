@@ -31,7 +31,8 @@ function Home(){
             <p>{streak} day streak</p>
             <button onClick={()=>navigate('/subject')}>Start Practice</button>
             <button onClick={()=>navigate('/dashboard')}>Dashboard</button>
-            <button onClick={handleLogout} style={{display:"block", marginTop:"20px"}}>Logout</button>
+            <button onClick={() => navigate('/weekly-test')}>Weekly Test</button>
+             <button onClick={handleLogout} style={{display:"block", marginTop:"20px"}}>Logout</button>        
         </div>
     ) 
 }

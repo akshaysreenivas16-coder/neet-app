@@ -10,6 +10,7 @@ import ChapterSelect from './pages/ChapterSelect';
 import Dashboard from './pages/Dashboard';
 import SubjectDashboard from './pages/SubjectDashboard';
 import Home from './pages/Home';
+import WeeklyTest from './pages/WeeklyTest';
 
 
 function ProtectedRoute({children}){
@@ -42,7 +43,8 @@ function App(){
         <Route path="/practice" element={<ProtectedRoute><Practice/></ProtectedRoute>}/>
         <Route path="/chapters/:subject" element={<ProtectedRoute><ChapterSelect/></ProtectedRoute>}/> //colon is for variable selection of subjects
         <Route path="/dashboard" element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/>   
-        <Route path="/dashboard/:subject" element={<ProtectedRoute><SubjectDashboard/></ProtectedRoute>}/> 
+        <Route path="/dashboard/:subject" element={<ProtectedRoute><SubjectDashboard/></ProtectedRoute>}/>
+        <Route path="/weekly-test" element={<ProtectedRoute><WeeklyTest/></ProtectedRoute>} />
       </Routes>
     </BrowserRouter>
   )
