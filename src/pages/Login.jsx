@@ -17,8 +17,21 @@ function Login(){
         if(error){
             setMessage(error.message)
         }else{
-            navigate('/home')
+            const {data:profile} = await supabase
+                .from('profiles')
+                .select('id')
+                .eq('id', data.user.id)
+                .maybeSingle()
+            
+            if (profile){
+                navigate('/home')
+            }else{
+                navigate('/profile-setup')
+            }
+            
         }
+
+
     }
 
     return(

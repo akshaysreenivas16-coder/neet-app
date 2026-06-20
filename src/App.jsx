@@ -11,6 +11,8 @@ import Dashboard from './pages/Dashboard';
 import SubjectDashboard from './pages/SubjectDashboard';
 import Home from './pages/Home';
 import WeeklyTest from './pages/WeeklyTest';
+import ProfileSetup from './pages/ProfileSetup';
+import Profile from './pages/Profile';
 
 
 function ProtectedRoute({children}){
@@ -45,6 +47,8 @@ function App(){
         <Route path="/dashboard" element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/>   
         <Route path="/dashboard/:subject" element={<ProtectedRoute><SubjectDashboard/></ProtectedRoute>}/>
         <Route path="/weekly-test" element={<ProtectedRoute><WeeklyTest/></ProtectedRoute>} />
+        <Route path="/profile-setup" element={<ProtectedRoute><ProfileSetup/></ProtectedRoute>}/>
+        <Route path="/profile" element={<ProtectedRoute><Profile></Profile></ProtectedRoute>}/>      
       </Routes>
     </BrowserRouter>
   )

@@ -1,10 +1,13 @@
 ## App flow
 Login -> home -> start paractice -> subjectSelect -> chapterSelect -> practice
 
+1st login -> profile setup
+
 home 
     - practice
     - dashboard
     - weekly test
+    - profile
 
 ## Pages
 - Signup.jsx
@@ -16,6 +19,8 @@ home
 - subjectDashboard.jsx
 - home.jsx
 - weeklytest.jsx
+- ProfileSetup.jsx
+- Profile.jsx
 
 ## Component
 - Questioncard.jsx
