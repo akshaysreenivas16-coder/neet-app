@@ -1,16 +1,38 @@
-# React + Vite
+# NEET Prep App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A gamified NEET preparation platform built with React and Supabase.
 
-Currently, two official plugins are available:
+## Features
+- Practice questions by subject and chapter
+- Progress tracking with accuracy detection
+- Weak topic identification
+- Daily streak counter
+- Weekly competitive test with 80% accuracy gate
+- Leaderboard with username display
+- Profile setup and management
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
+- React (Vite)
+- Supabase (Database + Auth)
+- React Router DOM
+- Vercel (Hosting)
 
-## React Compiler
+## How to Run
+1. Clone the repo
+2. Run `npm install`
+3. Set up a Supabse project and add your credentials to `.env` file
+4. Run `npm run dev`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Pages
+- Login / Signup
+- Profile Setup (first time users)
+- Home — central hub with streak display
+- Subject Select
+- Chapter Select
+- Wave Select — questions split into 3 waves
+- Practice — MCQ with explanation and progress tracking
+- Dashboard — overall accuracy per subject
+- Subject Dashboard — chapter wise weak topic detection
+- Weekly Test — unlocks at 80% chapter accuracy
+- Leaderboard — weekly rankings
+- Profile — view your details

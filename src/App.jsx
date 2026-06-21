@@ -45,7 +45,7 @@ function App(){
         <Route path="/home" element={<ProtectedRoute><Home/></ProtectedRoute>}/>
         <Route path="/subject" element={<ProtectedRoute><SubjectSelect/></ProtectedRoute>}/>
         <Route path="/practice" element={<ProtectedRoute><Practice/></ProtectedRoute>}/>
-        <Route path="/chapters/:subject" element={<ProtectedRoute><ChapterSelect/></ProtectedRoute>}/> //colon is for variable selection of subjects
+        <Route path="/chapters/:subject" element={<ProtectedRoute><ChapterSelect/></ProtectedRoute>}/>
         <Route path="/dashboard" element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/>   
         <Route path="/dashboard/:subject" element={<ProtectedRoute><SubjectDashboard/></ProtectedRoute>}/>
         <Route path="/weekly-test" element={<ProtectedRoute><WeeklyTest/></ProtectedRoute>} />
