@@ -32,6 +32,7 @@ home
 - useParams
 - useSearchParams
 - supabase.auth
+- foreign key to profile from weekly_test_results for fetching the username to the leaderboard (leaderboard.jsx)
 
 ## Intalled packages
 - react-router-dom : page navigation

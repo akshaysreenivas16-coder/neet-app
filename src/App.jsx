@@ -13,6 +13,7 @@ import Home from './pages/Home';
 import WeeklyTest from './pages/WeeklyTest';
 import ProfileSetup from './pages/ProfileSetup';
 import Profile from './pages/Profile';
+import Leaderboard from './pages/Leaderboard';
 
 
 function ProtectedRoute({children}){
@@ -48,7 +49,8 @@ function App(){
         <Route path="/dashboard/:subject" element={<ProtectedRoute><SubjectDashboard/></ProtectedRoute>}/>
         <Route path="/weekly-test" element={<ProtectedRoute><WeeklyTest/></ProtectedRoute>} />
         <Route path="/profile-setup" element={<ProtectedRoute><ProfileSetup/></ProtectedRoute>}/>
-        <Route path="/profile" element={<ProtectedRoute><Profile></Profile></ProtectedRoute>}/>      
+        <Route path="/profile" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
+        <Route path="/leaderboard" element={<ProtectedRoute><Leaderboard/></ProtectedRoute>}/>     
       </Routes>
     </BrowserRouter>
   )
