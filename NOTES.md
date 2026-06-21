@@ -1,5 +1,5 @@
 ## App flow
-Login -> home -> start paractice -> subjectSelect -> chapterSelect -> practice
+Login -> home -> start paractice -> subjectSelect -> chapterSelect -> WaveSelect -> practice
 
 1st login -> profile setup
 
@@ -8,6 +8,7 @@ home
     - dashboard
     - weekly test
     - profile
+    - leaderboard
 
 ## Pages
 - Signup.jsx
@@ -21,6 +22,8 @@ home
 - weeklytest.jsx
 - ProfileSetup.jsx
 - Profile.jsx
+- LeaderBoard.jsx
+- WaveSelect.jsx
 
 ## Component
 - Questioncard.jsx

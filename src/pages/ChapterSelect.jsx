@@ -27,7 +27,7 @@ return(
             {chapters.map((chapter)=>(
                 <button 
                     key={chapter}
-                    onClick={()=>navigate(`/practice?subject=${subject}&chapter=${chapter}`)}>
+                    onClick={()=>navigate(`/wave/${subject}?chapter=${chapter}`)}>
                     {chapter}
                 </button>
             ))}

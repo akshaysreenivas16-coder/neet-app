@@ -15,6 +15,8 @@ function Practice(){
     const [answered, setAnswered]= useState(false)
     const [score, setScore]= useState(0)
     const [loading, setloading]=useState(true)
+    const from = parseInt(searchParams.get('from')) || 0
+    const to = parseInt(searchParams.get('to')) || 10
 
     //question fetching from database
     useEffect(() => {
@@ -24,6 +26,7 @@ function Practice(){
                 .select('*')
                 .eq('subject', subject.toLowerCase())
                 .eq('chapter', chapter)
+                .range(from, to -1)
             setQuestions(data)
             setloading(false)
         }
@@ -143,7 +146,7 @@ async function updateStreak() {
                 setAnswered(false)
             }}>
                 Try Again</button>
-              <button onClick={() => navigate('/home')}>Back to Home</button>
+              <button onClick={() => navigate(`/wave/${subject}?chapter=${chapter}`)}>Back</button>
         </div>
         )
     }

@@ -14,6 +14,7 @@ import WeeklyTest from './pages/WeeklyTest';
 import ProfileSetup from './pages/ProfileSetup';
 import Profile from './pages/Profile';
 import Leaderboard from './pages/Leaderboard';
+import WaveSelect from './pages/WaveSelect';
 
 
 function ProtectedRoute({children}){
@@ -50,7 +51,8 @@ function App(){
         <Route path="/weekly-test" element={<ProtectedRoute><WeeklyTest/></ProtectedRoute>} />
         <Route path="/profile-setup" element={<ProtectedRoute><ProfileSetup/></ProtectedRoute>}/>
         <Route path="/profile" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
-        <Route path="/leaderboard" element={<ProtectedRoute><Leaderboard/></ProtectedRoute>}/>     
+        <Route path="/leaderboard" element={<ProtectedRoute><Leaderboard/></ProtectedRoute>}/>    
+        <Route path="/wave/:subject" element={<ProtectedRoute><WaveSelect/></ProtectedRoute>}/>
       </Routes>
     </BrowserRouter>
   )
