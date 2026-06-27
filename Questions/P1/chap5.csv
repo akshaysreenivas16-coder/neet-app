@@ -1,0 +1,195 @@
+question,option_a,option_b,option_c,option_d,correct_option,subject,chapter,difficulty,explanation
+
+
+
+"Statement I: Work is a scalar quantity.
+Statement II: Work is the dot product of force and displacement.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","physics","Work, Energy and Power","easy","Since work is defined as W = F·s, it is a scalar quantity."
+"Assertion (A): Work done by a force can be negative.
+Reason (R): Negative work occurs when force acts opposite to displacement.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","physics","Work, Energy and Power","easy","Examples include friction and braking forces."
+"How many of the following statements are correct?
+
+1. Work can be positive.
+2. Work can be negative.
+3. Work can be zero.
+4. Work is a scalar quantity.
+
+Choose the correct option.","1","2","3","4","D","physics","Work, Energy and Power","easy","All four statements are correct."
+"Match the following:
+
+List I
+A. Force parallel to displacement
+B. Force opposite to displacement
+C. Force perpendicular to displacement
+D. Force making acute angle with displacement
+
+List II
+1. Positive work
+2. Negative work
+3. Zero work
+4. Positive work
+
+Choose the correct option.","A-1, B-2, C-3, D-4","A-2, B-1, C-3, D-4","A-1, B-3, C-2, D-4","A-4, B-2, C-1, D-3","A","physics","Work, Energy and Power","medium","The sign of work depends on the angle between force and displacement."
+"Which of the following forces does zero work during uniform circular motion?","Friction","Weight","Centripetal force","Applied force","C","physics","Work, Energy and Power","medium","Centripetal force is perpendicular to instantaneous displacement."
+"Statement I: Work done by gravity during downward motion is positive.
+Statement II: Gravity and displacement are in the same direction during downward motion.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","physics","Work, Energy and Power","easy","Angle between force and displacement is 0°."
+"Assertion (A): Carrying a suitcase horizontally at constant speed involves zero work done by the person on the suitcase in the vertical direction.
+Reason (R): Force applied by the person is perpendicular to displacement.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","physics","Work, Energy and Power","medium","Perpendicular force produces zero work."
+"A force of 10 N acts on a body producing a displacement of 5 m in the same direction. The work done is:","25 J","50 J","75 J","100 J","B","physics","Work, Energy and Power","easy","W = Fs cos0° = 10 × 5 = 50 J."
+"How many of the following situations involve zero work?
+
+1. Satellite revolving around Earth due to gravity.
+2. Carrying a bag horizontally at constant height.
+3. Pushing a wall that does not move.
+4. Centripetal force during circular motion.
+
+Choose the correct option.","1","2","3","4","D","physics","Work, Energy and Power","hard","All four involve zero work."
+"Which of the following is the SI unit of work?","Newton","Joule","Watt","Pascal","B","physics","Work, Energy and Power","easy","The SI unit of work is joule (J)."
+
+
+
+
+
+"Statement I: Kinetic energy depends on the mass and speed of a body.
+Statement II: Kinetic energy is proportional to the square of speed.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","physics","Work, Energy and Power","easy","KE = ½mv², so it depends on both mass and the square of speed."
+"Assertion (A): If the speed of a body doubles, its kinetic energy becomes four times.
+Reason (R): Kinetic energy is proportional to v².
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","physics","Work, Energy and Power","easy","Doubling speed gives KE' = ½m(2v)² = 4KE."
+"How many of the following statements are correct?
+
+1. Kinetic energy is always positive.
+2. Kinetic energy becomes zero when velocity is zero.
+3. Kinetic energy is a scalar quantity.
+4. Kinetic energy depends on the reference frame.
+
+Choose the correct option.","1","2","3","4","D","physics","Work, Energy and Power","medium","All four statements are correct."
+"Match the following:
+
+List I
+A. Kinetic energy
+B. Work-energy theorem
+C. Potential energy
+D. Power
+
+List II
+1. Rate of doing work
+2. Stored energy due to position
+3. ½mv²
+4. Net work equals change in kinetic energy
+
+Choose the correct option.","A-3, B-4, C-2, D-1","A-4, B-3, C-2, D-1","A-3, B-2, C-4, D-1","A-1, B-4, C-2, D-3","A","physics","Work, Energy and Power","easy","These are standard definitions from NCERT."
+"Which of the following statements represents the Work-Energy Theorem?","Net force equals mass times acceleration","Net work done equals change in kinetic energy","Energy can neither be created nor destroyed","Power equals work per unit time","B","physics","Work, Energy and Power","easy","The theorem states W_net = ΔKE."
+"A body of mass 2 kg moves with speed 10 m/s. Its kinetic energy is:","50 J","100 J","150 J","200 J","B","physics","Work, Energy and Power","easy","KE = ½mv² = ½×2×100 = 100 J."
+"A body's kinetic energy increases from 20 J to 80 J. The net work done on the body is:","20 J","40 J","60 J","80 J","C","physics","Work, Energy and Power","medium","W_net = ΔKE = 80 − 20 = 60 J."
+"Assertion (A): A body may have zero net force but non-zero kinetic energy.
+Reason (R): A body moving with constant velocity has zero acceleration but finite speed.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","physics","Work, Energy and Power","medium","Constant velocity implies KE can remain constant despite zero net force."
+"If the momentum of a body doubles, its kinetic energy becomes:","Double","Four times","Eight times","Unchanged","B","physics","Work, Energy and Power","hard","KE = p²/2m. If momentum doubles, KE becomes four times for constant mass."
+"How many of the following statements are correct?
+
+1. Work-energy theorem follows from Newton's laws.
+2. Net work can be negative.
+3. Negative net work decreases kinetic energy.
+4. Zero net work means constant kinetic energy.
+
+Choose the correct option.","1","2","3","4","D","physics","Work, Energy and Power","hard","All four statements are correct."
+
+
+
+
+"Statement I: Potential energy is energy possessed by a body due to its position or configuration.
+Statement II: Gravitational potential energy near Earth's surface is given by U = mgh.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","B","physics","Work, Energy and Power","easy","mgh is one example of potential energy, not the complete explanation of the concept."
+"Assertion (A): Gravitational potential energy increases with height.
+Reason (R): More work is required against gravity to raise the body to a higher position.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","physics","Work, Energy and Power","easy","Potential energy increases because work is done against gravity."
+"How many of the following statements are correct?
+
+1. Potential energy may be positive, negative or zero.
+2. Potential energy depends on the choice of reference level.
+3. Kinetic energy is always non-negative.
+4. Mechanical energy is the sum of kinetic and potential energies.
+
+Choose the correct option.","1","2","3","4","D","physics","Work, Energy and Power","medium","All four statements are correct."
+"Match the following:
+
+List I
+A. Kinetic energy
+B. Potential energy
+C. Mechanical energy
+D. Conservative force
+
+List II
+1. KE + PE
+2. Energy due to motion
+3. Energy due to position
+4. Work independent of path
+
+Choose the correct option.","A-2, B-3, C-1, D-4","A-3, B-2, C-1, D-4","A-2, B-1, C-3, D-4","A-1, B-3, C-2, D-4","A","physics","Work, Energy and Power","easy","These are standard definitions."
+"Which of the following is a conservative force?","Friction","Air resistance","Gravitational force","Viscous force","C","physics","Work, Energy and Power","easy","Work done by gravity depends only on initial and final positions."
+"Statement I: Work done by a conservative force over a closed path is zero.
+Statement II: Work done by a conservative force is path independent.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","physics","Work, Energy and Power","medium","Path independence directly leads to zero work over a closed path."
+"A body of mass 5 kg is raised to a height of 10 m. Taking g = 10 m/s², the increase in potential energy is:","250 J","500 J","750 J","1000 J","B","physics","Work, Energy and Power","easy","ΔU = mgh = 5 × 10 × 10 = 500 J."
+"Assertion (A): Friction is a non-conservative force.
+Reason (R): Work done by friction depends on the path followed.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","physics","Work, Energy and Power","medium","Longer paths involve more work done against friction."
+"If a body falls freely from height h, neglecting air resistance, its potential energy at the ground becomes:","mgh","½mgh","0","−mgh","C","physics","Work, Energy and Power","medium","Taking ground as reference level gives PE = 0 at ground."
+"How many of the following statements are correct?
+
+1. Gravitational force is conservative.
+2. Electrostatic force is conservative.
+3. Friction is non-conservative.
+4. Air resistance is non-conservative.
+
+Choose the correct option.","1","2","3","4","D","physics","Work, Energy and Power","hard","All four statements are correct."
+
+
+
+
+
+"Statement I: Power is the rate of doing work.
+Statement II: The SI unit of power is watt.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","B","physics","Work, Energy and Power","easy","Power is defined as work done per unit time and is measured in watts."
+"Assertion (A): A machine performing the same work in less time has greater power.
+Reason (R): Power is directly proportional to time taken for fixed work.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","C","physics","Work, Energy and Power","medium","For fixed work, P = W/t, so power is inversely proportional to time."
+"How many of the following statements are correct?
+
+1. Power is a scalar quantity.
+2. One horsepower is approximately 746 W.
+3. Instantaneous power can be written as P = F·v.
+4. Average power equals total work divided by total time.
+
+Choose the correct option.","1","2","3","4","D","physics","Work, Energy and Power","medium","All four statements are correct."
+"Match the following:
+
+List I
+A. Average power
+B. Instantaneous power
+C. Horsepower
+D. Efficiency
+
+List II
+1. Output energy/Input energy
+2. W/t
+3. F·v
+4. 746 W
+
+Choose the correct option.","A-2, B-3, C-4, D-1","A-3, B-2, C-4, D-1","A-2, B-4, C-3, D-1","A-1, B-3, C-4, D-2","A","physics","Work, Energy and Power","easy","These are standard definitions and relations."
+"A machine does 500 J of work in 10 s. Its power output is:","25 W","50 W","75 W","100 W","B","physics","Work, Energy and Power","easy","P = W/t = 500/10 = 50 W."
+"Statement I: Efficiency of a machine can never exceed 100%.
+Statement II: Some energy is always lost in practical machines due to friction and other effects.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","physics","Work, Energy and Power","medium","No real machine can convert all input energy into useful output energy."
+"Assertion (A): A body moving with constant velocity can still possess power.
+Reason (R): Power depends on force and velocity, not acceleration alone.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","physics","Work, Energy and Power","hard","For example, a car moving at constant speed against friction continuously delivers power."
+"A motor of power 2 kW operates for 5 minutes. The energy consumed is:","100 kJ","300 kJ","600 kJ","1000 kJ","C","physics","Work, Energy and Power","hard","Energy = Power × Time = 2000 × 300 = 600000 J = 600 kJ."
+"How many of the following statements are correct?
+
+1. Efficiency is dimensionless.
+2. Efficiency is often expressed as a percentage.
+3. Input energy is always greater than or equal to output energy.
+4. An ideal machine has 100% efficiency.
+
+Choose the correct option.","1","2","3","4","D","physics","Work, Energy and Power","medium","All four statements are correct."
+"A machine receives 1000 J of energy and delivers 800 J as useful output. Its efficiency is:","60%","70%","80%","90%","C","physics","Work, Energy and Power","easy","Efficiency = (800/1000) × 100 = 80%."

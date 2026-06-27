@@ -33,6 +33,6 @@ A gamified NEET preparation platform built with React and Supabase.
 - Practice — MCQ with explanation and progress tracking
 - Dashboard — overall accuracy per subject
 - Subject Dashboard — chapter wise weak topic detection
-- Weekly Test — unlocks at 80% chapter accuracy
+- Weekly Test — unlocks at 70% chapter accuracy
 - Leaderboard — weekly rankings
 - Profile — view your details

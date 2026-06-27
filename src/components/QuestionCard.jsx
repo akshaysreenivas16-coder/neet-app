@@ -1,7 +1,11 @@
 function QuestionCard({ question, onAnswer, selected, answered }) {
   return (
     <div>
-      <p>{question.question}</p>
+      <p>
+        {question.question.split('\n').map((line, i) => (
+        <span key={i}>{line}<br/></span>
+        ))}
+      </p>
       {['A', 'B', 'C', 'D'].map((opt) => (
         <button
           key={opt}

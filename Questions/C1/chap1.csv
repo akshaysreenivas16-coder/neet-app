@@ -1,0 +1,259 @@
+question,option_a,option_b,option_c,option_d,correct_option,subject,chapter,difficulty,explanation
+
+
+
+"Statement I: Matter is anything that has mass and occupies space.
+Statement II: Matter can exist only in solid, liquid and gaseous states.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","C","chemistry","Some Basic Concepts of Chemistry","easy","Matter is defined as anything having mass and occupying space. Plasma and Bose-Einstein condensate are additional states of matter."
+"Assertion (A): One atomic mass unit is defined as one-twelfth of the mass of a carbon-12 atom.
+Reason (R): Carbon-12 contains exactly 12 protons.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","B","chemistry","Some Basic Concepts of Chemistry","medium","The definition of amu is based on carbon-12, but carbon-12 contains 6 protons and 6 neutrons."
+"How many of the following statements are correct?
+
+1. One mole contains Avogadro number of entities.
+2. One mole of oxygen atoms contains 6.022 × 10^23 atoms.
+3. One mole of O₂ molecules contains 12.044 × 10^23 atoms.
+4. One mole of electrons carries a charge of 96485 C.
+
+Choose the correct option.","1","2","3","4","D","chemistry","Some Basic Concepts of Chemistry","hard","All four statements are correct. One mole of O₂ molecules contains two moles of oxygen atoms."
+"Match the following:
+
+List I
+A. 1 u
+B. 1 mol
+C. Avogadro constant
+D. Faraday constant
+
+List II
+1. 6.022 × 10^23 mol⁻¹
+2. 96485 C mol⁻¹
+3. 1/12th mass of carbon-12 atom
+4. Amount of substance containing Avogadro number of entities
+
+Choose the correct option.","A-3, B-4, C-1, D-2","A-4, B-3, C-1, D-2","A-3, B-1, C-4, D-2","A-2, B-4, C-1, D-3","A","chemistry","Some Basic Concepts of Chemistry","medium","These are standard definitions used throughout physical chemistry."
+"What is the number of molecules present in 22 g of CO₂? (Atomic masses: C = 12, O = 16)","3.011 × 10^23","6.022 × 10^23","1.204 × 10^24","9.033 × 10^23","A","chemistry","Some Basic Concepts of Chemistry","medium","Molar mass of CO₂ = 44 g mol⁻¹. Therefore 22 g = 0.5 mol, containing 0.5 × 6.022 × 10^23 molecules."
+"Statement I: The empirical formula represents the simplest whole number ratio of atoms in a compound.
+Statement II: The molecular formula may be the same as the empirical formula.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","B","chemistry","Some Basic Concepts of Chemistry","medium","For compounds like H₂O and CO₂, empirical and molecular formulae are identical."
+"Assertion (A): The empirical formula of glucose is CH₂O.
+Reason (R): The molecular formula of glucose is C₆H₁₂O₆.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","chemistry","Some Basic Concepts of Chemistry","easy","Dividing subscripts in C₆H₁₂O₆ by 6 gives CH₂O."
+"A sample contains 3.01 × 10^23 molecules of NH₃. The number of moles of NH₃ present is:","0.25 mol","0.50 mol","1.00 mol","2.00 mol","B","chemistry","Some Basic Concepts of Chemistry","easy","Number of moles = number of molecules / Avogadro number = 3.01×10^23 / 6.022×10^23 = 0.5 mol."
+"How many of the following statements are correct?
+
+1. Molar mass is numerically equal to molecular mass.
+2. Molecular mass has unit u.
+3. Molar mass has unit g mol⁻¹.
+4. One mole of any gas occupies 22.4 L at STP.
+
+Choose the correct option.","1","2","3","4","D","chemistry","Some Basic Concepts of Chemistry","hard","All four statements are correct under the classical STP definition used in NEET."
+"A sample of 18 g of water contains:","0.5 mol water molecules","1 mol water molecules","2 mol water molecules","6.022 × 10^24 water molecules","B","chemistry","Some Basic Concepts of Chemistry","easy","Molar mass of H₂O is 18 g mol⁻¹, hence 18 g corresponds to 1 mol of water molecules."
+
+
+
+
+"Statement I: Law of conservation of mass was proposed by Antoine Lavoisier.
+Statement II: During a chemical reaction, mass can neither be created nor destroyed.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","chemistry","Some Basic Concepts of Chemistry","easy","The law states that total mass remains constant during a chemical reaction."
+"Assertion (A): The law of definite proportions is also called the law of constant composition.
+Reason (R): A chemical compound always contains the same elements in the same proportion by mass.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","chemistry","Some Basic Concepts of Chemistry","easy","This law was proposed by Proust and forms the basis of fixed composition of compounds."
+"How many of the following statements are correct?
+
+1. Dalton's atomic theory could explain the law of conservation of mass.
+2. Dalton's atomic theory could explain the law of definite proportions.
+3. Dalton considered atoms to be indivisible.
+4. Dalton's theory explains isotopes completely.
+
+Choose the correct option.","1","2","3","4","C","chemistry","Some Basic Concepts of Chemistry","hard","Statements 1, 2 and 3 are correct. Dalton's theory could not explain isotopes and isobars."
+"Match the following:
+
+List I
+A. Lavoisier
+B. Proust
+C. Dalton
+D. Avogadro
+
+List II
+1. Atomic theory
+2. Law of conservation of mass
+3. Law of definite proportions
+4. Equal volumes contain equal number of molecules
+
+Choose the correct option.","A-2, B-3, C-1, D-4","A-3, B-2, C-1, D-4","A-2, B-1, C-3, D-4","A-4, B-3, C-1, D-2","A","chemistry","Some Basic Concepts of Chemistry","medium","These are foundational contributors to chemical laws and atomic theory."
+"Calculate the number of moles present in 49 g of H₂SO₄. (H = 1, S = 32, O = 16)","0.25 mol","0.50 mol","1.00 mol","2.00 mol","B","chemistry","Some Basic Concepts of Chemistry","medium","Molar mass of H₂SO₄ = 98 g mol⁻¹. Therefore moles = 49/98 = 0.5 mol."
+"Statement I: Limiting reagent is completely consumed during a reaction.
+Statement II: Amount of product formed depends upon the limiting reagent.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","chemistry","Some Basic Concepts of Chemistry","medium","The limiting reagent determines the maximum amount of product that can be formed."
+"Assertion (A): In stoichiometric calculations, balanced chemical equations are essential.
+Reason (R): Stoichiometric coefficients represent mole ratios between reactants and products.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","chemistry","Some Basic Concepts of Chemistry","medium","Balanced equations provide quantitative relationships between substances."
+"How many molecules are present in 11.2 L of O₂ at STP?","1.505 × 10^23","3.011 × 10^23","6.022 × 10^23","9.033 × 10^23","B","chemistry","Some Basic Concepts of Chemistry","medium","At STP, 22.4 L = 1 mol. Therefore 11.2 L = 0.5 mol = 3.011 × 10^23 molecules."
+"How many of the following statements are correct?
+
+1. One mole of Na atoms contains 6.022 × 10^23 atoms.
+2. One mole of Na⁺ ions contains 6.022 × 10^23 ions.
+3. One mole of electrons contains 6.022 × 10^23 electrons.
+4. One mole of H₂ molecules contains 2 × 6.022 × 10^23 hydrogen atoms.
+
+Choose the correct option.","1","2","3","4","D","chemistry","Some Basic Concepts of Chemistry","hard","All four statements correctly apply the mole concept."
+"4 g of hydrogen reacts completely with 32 g of oxygen to form water according to:
+2H₂ + O₂ → 2H₂O
+The mass of water produced is:","18 g","32 g","36 g","40 g","C","chemistry","Some Basic Concepts of Chemistry","hard","By conservation of mass, total mass of products equals total mass of reactants: 4 g + 32 g = 36 g H₂O."
+
+
+
+
+
+"Statement I: Percentage composition gives the mass percentage of each element present in a compound.
+Statement II: The sum of percentage compositions of all elements in a pure compound is always 100%.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","B","chemistry","Some Basic Concepts of Chemistry","easy","Both statements are correct. The second is a consequence of the first but not its explanation."
+"Assertion (A): The percentage of oxygen in H₂O is approximately 88.89%.
+Reason (R): Oxygen contributes 16 g out of the total molar mass of 18 g mol⁻¹.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","chemistry","Some Basic Concepts of Chemistry","medium","%O = (16/18) × 100 = 88.89%."
+"How many of the following statements are correct?
+
+1. Empirical formula mass is the sum of atomic masses in the empirical formula.
+2. Molecular formula may be a whole-number multiple of empirical formula.
+3. Empirical and molecular formulae are always different.
+4. CH₂O is the empirical formula of glucose.
+
+Choose the correct option.","1","2","3","4","C","chemistry","Some Basic Concepts of Chemistry","medium","Statements 1, 2 and 4 are correct. Empirical and molecular formulae can be identical, e.g., H₂O."
+"Match the following:
+
+List I
+A. H₂O₂
+B. Benzene
+C. Glucose
+D. Acetylene
+
+List II
+1. CH
+2. CH₂O
+3. HO
+4. CH
+
+Choose the correct option.","A-3, B-4, C-2, D-1","A-3, B-1, C-2, D-4","A-1, B-4, C-2, D-3","A-3, B-4, C-1, D-2","B","chemistry","Some Basic Concepts of Chemistry","hard","Empirical formulae: H₂O₂ → HO, C₆H₆ → CH, C₆H₁₂O₆ → CH₂O, C₂H₂ → CH."
+"A compound contains 40% carbon, 6.67% hydrogen and 53.33% oxygen by mass. Its empirical formula is:","CH₂O","CHO","C₂H₄O","C₂H₂O₂","A","chemistry","Some Basic Concepts of Chemistry","hard","For 100 g compound: C=40/12=3.33, H=6.67/1=6.67, O=53.33/16=3.33. Ratio ≈ 1:2:1 → CH₂O."
+"Statement I: Molecular formula can be obtained if empirical formula and molar mass are known.
+Statement II: Molecular formula mass is always equal to empirical formula mass.
+Choose the correct option.","Both statements are true","Both statements are false","Statement I is true but Statement II is false","Statement I is false but Statement II is true","C","chemistry","Some Basic Concepts of Chemistry","medium","Molecular mass = n × empirical formula mass, where n is an integer."
+"Assertion (A): One mole of calcium carbonate contains three moles of atoms.
+Reason (R): Each formula unit of CaCO₃ contains three atoms.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","C","chemistry","Some Basic Concepts of Chemistry","hard","CaCO₃ contains 5 atoms per formula unit (1 Ca + 1 C + 3 O), so one mole contains 5 moles of atoms."
+"How many atoms are present in 5.85 g of NaCl? (Na = 23, Cl = 35.5)","6.022 × 10^22","1.204 × 10^23","6.022 × 10^23","1.204 × 10^24","B","chemistry","Some Basic Concepts of Chemistry","hard","Molar mass of NaCl = 58.5 g mol⁻¹, so 5.85 g = 0.1 mol NaCl = 0.2 mol atoms = 1.204 × 10^23 atoms."
+"How many of the following statements are correct?
+
+1. Molar mass of O₂ is 32 g mol⁻¹.
+2. Molecular mass of O₂ is 32 u.
+3. One mole of O₂ contains 32 g oxygen atoms.
+4. One mole of O₂ contains 2 moles of oxygen atoms.
+
+Choose the correct option.","1","2","3","4","D","chemistry","Some Basic Concepts of Chemistry","hard","All four statements are correct."
+"Calculate the mass of 0.25 mol of Na₂CO₃. (Na = 23, C = 12, O = 16)","10.6 g","21.2 g","26.5 g","53.0 g","C","chemistry","Some Basic Concepts of Chemistry","medium","Molar mass of Na₂CO₃ = 2×23 + 12 + 3×16 = 106 g mol⁻¹. Mass = 0.25 × 106 = 26.5 g."
+
+
+
+
+"Statement I: In a balanced chemical equation, the number of atoms of each element remains the same on both sides of the equation.
+Statement II: A balanced equation obeys the law of conservation of mass.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","chemistry","Some Basic Concepts of Chemistry","easy","Balancing ensures equal numbers of atoms and therefore conserves mass."
+"Assertion (A): Stoichiometric coefficients represent mole ratios between reactants and products.
+Reason (R): The coefficients in a balanced equation can be interpreted in terms of molecules, moles and gaseous volumes.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","chemistry","Some Basic Concepts of Chemistry","medium","Balanced equation coefficients provide quantitative relationships among substances."
+"How many of the following statements are correct?
+
+1. One mole of CH₄ contains 5 moles of atoms.
+2. One mole of NH₃ contains 4 moles of atoms.
+3. One mole of H₂SO₄ contains 7 moles of atoms.
+4. One mole of CaCO₃ contains 6 moles of atoms.
+
+Choose the correct option.","1","2","3","4","C","chemistry","Some Basic Concepts of Chemistry","hard","Statements 1, 2 and 3 are correct. CaCO₃ contains 5 atoms per formula unit, hence 5 moles of atoms per mole."
+"Match the following:
+
+List I
+A. CH₄
+B. NH₃
+C. H₂SO₄
+D. CaCO₃
+
+List II
+1. 5 mol atoms per mol compound
+2. 4 mol atoms per mol compound
+3. 7 mol atoms per mol compound
+4. 5 mol atoms per mol compound
+
+Choose the correct option.","A-1, B-2, C-3, D-4","A-2, B-1, C-3, D-4","A-1, B-3, C-2, D-4","A-4, B-2, C-1, D-3","A","chemistry","Some Basic Concepts of Chemistry","medium","CH₄ contains 5 atoms, NH₃ contains 4, H₂SO₄ contains 7 and CaCO₃ contains 5 atoms per formula unit."
+"How many moles of oxygen atoms are present in 2 moles of Al₂(SO₄)₃?","3 mol","6 mol","12 mol","24 mol","D","chemistry","Some Basic Concepts of Chemistry","hard","One mole of Al₂(SO₄)₃ contains 12 oxygen atoms per formula unit, hence 2 moles contain 24 moles of oxygen atoms."
+"Statement I: Limiting reagent determines the maximum amount of product formed.
+Statement II: Excess reagent remains unreacted after completion of the reaction.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","B","chemistry","Some Basic Concepts of Chemistry","medium","Both statements are correct but the second does not explain why the limiting reagent controls product amount."
+"Assertion (A): In the reaction N₂ + 3H₂ → 2NH₃, 1 mol of N₂ requires 3 mol of H₂ for complete reaction.
+Reason (R): The stoichiometric ratio between N₂ and H₂ is 1:3.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","chemistry","Some Basic Concepts of Chemistry","easy","The balanced equation directly gives the mole ratio."
+"2 mol of H₂ reacts with 1 mol of O₂ according to:
+2H₂ + O₂ → 2H₂O
+The amount of H₂O formed is:","1 mol","2 mol","3 mol","4 mol","B","chemistry","Some Basic Concepts of Chemistry","medium","The reactants are present in exact stoichiometric proportions and produce 2 mol of water."
+"How many of the following statements are correct?
+
+1. 44 g of CO₂ contains 6.022 × 10²³ molecules.
+2. 18 g of H₂O contains 6.022 × 10²³ molecules.
+3. 28 g of N₂ contains 6.022 × 10²³ molecules.
+4. 32 g of O₂ contains 6.022 × 10²³ atoms.
+
+Choose the correct option.","1","2","3","4","C","chemistry","Some Basic Concepts of Chemistry","hard","Statements 1, 2 and 3 are correct. 32 g of O₂ contains 6.022×10²³ molecules but 1.2044×10²⁴ oxygen atoms."
+"5.6 L of CO₂ at STP contains:","0.10 mol molecules","0.25 mol molecules","0.50 mol molecules","1.00 mol molecules","B","chemistry","Some Basic Concepts of Chemistry","medium","At STP, 22.4 L corresponds to 1 mol. Therefore 5.6 L corresponds to 5.6/22.4 = 0.25 mol."
+
+
+
+
+"Statement I: Percentage yield of a reaction can never exceed 100% for a pure product under ideal conditions.
+Statement II: Percentage yield is calculated using actual yield and theoretical yield.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","B","chemistry","Some Basic Concepts of Chemistry","medium","Percentage yield = (Actual yield/Theoretical yield) × 100. Actual yield is usually less than theoretical yield."
+"Assertion (A): Theoretical yield is calculated from the limiting reagent.
+Reason (R): The limiting reagent is completely consumed during the reaction.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","chemistry","Some Basic Concepts of Chemistry","medium","Since the limiting reagent is exhausted first, it determines the maximum possible amount of product."
+"How many of the following statements are correct?
+
+1. One mole of NaCl contains 6.022 × 10^23 formula units.
+2. One mole of CaCl₂ contains 3 moles of ions after complete dissociation.
+3. One mole of Al₂(SO₄)₃ gives 5 moles of ions after complete dissociation.
+4. One mole of Ba(OH)₂ gives 3 moles of ions after complete dissociation.
+
+Choose the correct option.","1","2","3","4","D","chemistry","Some Basic Concepts of Chemistry","hard","All four statements are correct: NaCl → 2 ions, CaCl₂ → 3 ions, Al₂(SO₄)₃ → 5 ions and Ba(OH)₂ → 3 ions."
+"Match the following:
+
+List I
+A. 18 g H₂O
+B. 44 g CO₂
+C. 32 g O₂
+D. 2 g H₂
+
+List II
+1. 1 mol molecules
+2. 1 mol molecules
+3. 1 mol molecules
+4. 1 mol molecules
+
+Choose the correct option.","A-1, B-2, C-3, D-4","A-4, B-3, C-2, D-1","A-2, B-1, C-4, D-3","A-3, B-2, C-1, D-4","A","chemistry","Some Basic Concepts of Chemistry","easy","Each mass listed is exactly equal to the molar mass of the corresponding substance and therefore represents 1 mole."
+"Calculate the mass of 3.01 × 10^23 molecules of CH₄. (C = 12, H = 1)","4 g","8 g","16 g","32 g","B","chemistry","Some Basic Concepts of Chemistry","medium","3.01 × 10^23 molecules = 0.5 mol. Molar mass of CH₄ = 16 g mol⁻¹. Mass = 0.5 × 16 = 8 g."
+"Statement I: Mole fraction is a unitless quantity.
+Statement II: The sum of mole fractions of all components in a mixture is equal to 1.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","B","chemistry","Some Basic Concepts of Chemistry","hard","Both statements are correct but the second does not explain why mole fraction is dimensionless."
+"Assertion (A): One mole of electrons carries a charge of approximately 96485 C.
+Reason (R): Charge on one electron is 1.602 × 10^-19 C.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","chemistry","Some Basic Concepts of Chemistry","medium","Faraday constant = Avogadro number × electronic charge = 96485 C mol⁻¹."
+"4 g of H₂ reacts with excess Cl₂ according to:
+H₂ + Cl₂ → 2HCl
+The number of moles of HCl formed is:","1 mol","2 mol","4 mol","8 mol","C","chemistry","Some Basic Concepts of Chemistry","medium","4 g H₂ = 2 mol H₂. From the equation, 1 mol H₂ produces 2 mol HCl, therefore 2 mol H₂ produces 4 mol HCl."
+"How many of the following statements are correct?
+
+1. 1 mol of Na atoms contains 23 g of Na.
+2. 1 mol of Fe atoms contains 56 g of Fe.
+3. 1 mol of Ca atoms contains 40 g of Ca.
+4. 1 mol of Mg atoms contains 24 g of Mg.
+
+Choose the correct option.","1","2","3","4","D","chemistry","Some Basic Concepts of Chemistry","easy","All statements are correct using standard NEET atomic masses."
+"10 g of calcium carbonate on complete decomposition produces CaO and CO₂ according to:
+CaCO₃ → CaO + CO₂
+The mass of CO₂ formed is: (Ca = 40, C = 12, O = 16)","2.2 g","4.4 g","5.6 g","8.8 g","B","chemistry","Some Basic Concepts of Chemistry","hard","100 g CaCO₃ produces 44 g CO₂. Therefore 10 g CaCO₃ produces (44/100) × 10 = 4.4 g CO₂."

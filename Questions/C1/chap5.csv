@@ -1,0 +1,250 @@
+question,option_a,option_b,option_c,option_d,correct_option,subject,chapter,difficulty,explanation
+
+
+"Statement I: Intermolecular forces are weaker than intramolecular forces.
+Statement II: Intermolecular forces are responsible for the physical state of substances.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","B","chemistry","States of Matter","easy","Intermolecular forces determine melting point, boiling point and physical state, but do not explain why they are weaker than intramolecular forces."
+"Assertion (A): Gases are highly compressible.
+Reason (R): Gas particles are separated by large intermolecular spaces.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","chemistry","States of Matter","easy","Large intermolecular spaces allow gas particles to be compressed easily."
+"How many of the following statements are correct?
+
+1. Solids possess definite shape and definite volume.
+2. Liquids possess definite volume but no definite shape.
+3. Gases possess neither definite shape nor definite volume.
+4. Gases are highly compressible.
+
+Choose the correct option.","1","2","3","4","D","chemistry","States of Matter","easy","All four statements correctly describe the three states of matter."
+"Match the following:
+
+List I
+A. London forces
+B. Dipole-dipole interactions
+C. Hydrogen bonding
+D. Ion-dipole interactions
+
+List II
+1. Strongest among intermolecular forces listed
+2. Present between polar molecules
+3. Present in all molecules
+4. Important in dissolution of ionic compounds in water
+
+Choose the correct option.","A-3, B-2, C-1, D-4","A-2, B-3, C-1, D-4","A-3, B-1, C-2, D-4","A-4, B-2, C-3, D-1","A","chemistry","States of Matter","medium","London forces exist in all molecules, hydrogen bonding is particularly strong and ion-dipole interactions are important in solutions."
+"According to Boyle's law, if pressure is doubled at constant temperature, the volume becomes:","Double","Half","Four times","Unchanged","B","chemistry","States of Matter","easy","Boyle's law states that P is inversely proportional to V at constant temperature."
+"Statement I: Charles' law states that volume is directly proportional to absolute temperature at constant pressure.
+Statement II: Temperature in Charles' law must be expressed in Kelvin.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","chemistry","States of Matter","medium","The direct proportionality exists only when temperature is measured on the absolute scale."
+"Assertion (A): At absolute zero, an ideal gas would have zero volume according to Charles' law.
+Reason (R): Absolute zero corresponds to 0 K.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","B","chemistry","States of Matter","medium","The reason identifies absolute zero but does not explain the extrapolation of Charles' law."
+"How many of the following statements are correct?
+
+1. Avogadro's law states that equal volumes of gases at same temperature and pressure contain equal numbers of molecules.
+2. One mole of any ideal gas occupies 22.4 L at STP.
+3. The molar volume of an ideal gas at STP is 22.4 L mol⁻¹.
+4. Volume is directly proportional to number of moles at constant temperature and pressure.
+
+Choose the correct option.","1","2","3","4","D","chemistry","States of Matter","hard","All four statements are correct according to classical STP conditions used in NEET."
+"A gas occupies 4 L at 1 atm pressure. If pressure becomes 2 atm at constant temperature, the final volume is:","1 L","2 L","4 L","8 L","B","chemistry","States of Matter","medium","Using Boyle's law: P₁V₁=P₂V₂ → 1×4=2×V₂, therefore V₂=2 L."
+"Which of the following intermolecular forces is responsible for liquefaction of noble gases?","Hydrogen bonding","Dipole-dipole interactions","London dispersion forces","Ion-dipole interactions","C","chemistry","States of Matter","hard","Noble gases are non-polar and are held together only by London dispersion forces."
+
+
+
+
+"Statement I: According to Gay-Lussac's law, pressure is directly proportional to absolute temperature at constant volume.
+Statement II: Temperature in Gay-Lussac's law must be expressed in Kelvin.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","chemistry","States of Matter","easy","The proportionality P ∝ T holds only on the absolute temperature scale."
+"Assertion (A): The ideal gas equation combines Boyle's, Charles' and Avogadro's laws.
+Reason (R): The equation PV = nRT satisfies all three gas laws simultaneously.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","chemistry","States of Matter","easy","The ideal gas equation is obtained by combining these empirical gas laws."
+"How many of the following statements are correct?
+
+1. The SI unit of R is J mol⁻¹ K⁻¹.
+2. The value of R depends on the units of pressure and volume used.
+3. R = 0.0821 L atm mol⁻¹ K⁻¹.
+4. R = 8.314 J mol⁻¹ K⁻¹.
+
+Choose the correct option.","1","2","3","4","D","chemistry","States of Matter","medium","All four statements are correct."
+"Match the following:
+
+List I
+A. R = 0.0821
+B. R = 8.314
+C. R = 62.1
+D. R = 1.987
+
+List II
+1. cal mol⁻¹ K⁻¹
+2. L mmHg mol⁻¹ K⁻¹
+3. J mol⁻¹ K⁻¹
+4. L atm mol⁻¹ K⁻¹
+
+Choose the correct option.","A-4, B-3, C-2, D-1","A-3, B-4, C-2, D-1","A-4, B-2, C-3, D-1","A-1, B-3, C-4, D-2","A","chemistry","States of Matter","hard","These are standard values of the gas constant in different unit systems."
+"Calculate the volume occupied by 2 mol of an ideal gas at STP.","11.2 L","22.4 L","44.8 L","89.6 L","C","chemistry","States of Matter","easy","At STP, 1 mol occupies 22.4 L, therefore 2 mol occupies 44.8 L."
+"Statement I: Dalton's law states that total pressure is equal to the sum of partial pressures of individual gases.
+Statement II: Dalton's law is applicable to non-reacting gases.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","B","chemistry","States of Matter","medium","Dalton's law applies to mixtures of non-reacting gases but this does not explain the definition."
+"Assertion (A): Partial pressure of a gas is proportional to its mole fraction in the mixture.
+Reason (R): Partial pressure of gas i is given by Pi = Xi × Ptotal.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","chemistry","States of Matter","medium","This relation directly follows from Dalton's law."
+"A gaseous mixture contains 2 mol of O₂ and 3 mol of N₂. The mole fraction of oxygen is:","0.20","0.40","0.50","0.60","B","chemistry","States of Matter","medium","XO₂ = 2/(2+3) = 0.40."
+"How many of the following statements are correct?
+
+1. Density of an ideal gas increases with molar mass.
+2. Density of an ideal gas increases with pressure.
+3. Density of an ideal gas decreases with temperature.
+4. d = PM/RT for an ideal gas.
+
+Choose the correct option.","1","2","3","4","D","chemistry","States of Matter","hard","All four statements are correct and follow from rearrangement of PV=nRT."
+"A gas has density 1.25 g L⁻¹ at STP. Its molar mass is approximately:","14 g mol⁻¹","22.4 g mol⁻¹","28 g mol⁻¹","44 g mol⁻¹","C","chemistry","States of Matter","hard","At STP, M = density × 22.4 = 1.25 × 22.4 = 28 g mol⁻¹."
+
+
+
+
+"Statement I: According to kinetic molecular theory, gas molecules are in continuous random motion.
+Statement II: Collisions between gas molecules are perfectly elastic.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","B","chemistry","States of Matter","easy","Both are assumptions of KMT, but elastic collisions do not explain random motion."
+"Assertion (A): The pressure exerted by a gas arises due to collisions of molecules with the walls of the container.
+Reason (R): Gas molecules possess kinetic energy.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","chemistry","States of Matter","medium","Pressure results from molecular collisions caused by their kinetic motion."
+"How many of the following statements are correct?
+
+1. The average kinetic energy of gas molecules depends only on temperature.
+2. Average kinetic energy is independent of the nature of gas.
+3. At the same temperature, all gases have the same average kinetic energy.
+4. Average kinetic energy is directly proportional to absolute temperature.
+
+Choose the correct option.","1","2","3","4","D","chemistry","States of Matter","medium","All four statements are consequences of KMT."
+"Match the following:
+
+List I
+A. Root mean square velocity
+B. Average velocity
+C. Most probable velocity
+D. Average kinetic energy
+
+List II
+1. √(8RT/πM)
+2. √(3RT/M)
+3. (3/2)RT
+4. √(2RT/M)
+
+Choose the correct option.","A-2, B-1, C-4, D-3","A-1, B-2, C-4, D-3","A-2, B-4, C-1, D-3","A-4, B-1, C-2, D-3","A","chemistry","States of Matter","hard","u_rms = √(3RT/M), u_avg = √(8RT/πM), u_mp = √(2RT/M)."
+"Which of the following relation is correct?","u_mp > u_avg > u_rms","u_rms > u_avg > u_mp","u_avg > u_rms > u_mp","u_rms > u_mp > u_avg","B","chemistry","States of Matter","hard","The standard order is u_rms > u_avg > u_mp."
+"Statement I: RMS velocity increases with temperature.
+Statement II: RMS velocity is inversely proportional to the square root of molar mass.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","B","chemistry","States of Matter","medium","Both follow from u_rms = √(3RT/M), but the second does not explain the first."
+"Assertion (A): Hydrogen diffuses faster than oxygen.
+Reason (R): Rate of diffusion is inversely proportional to the square root of molar mass.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","chemistry","States of Matter","easy","This is Graham's law of diffusion."
+"The ratio of rates of diffusion of H₂ and O₂ is:","1 : 4","4 : 1","1 : 16","16 : 1","B","chemistry","States of Matter","medium","rH₂/rO₂ = √(32/2) = √16 = 4."
+"How many of the following statements are correct?
+
+1. RMS velocity of H₂ is greater than O₂ at the same temperature.
+2. RMS velocity depends on molar mass.
+3. RMS velocity increases with temperature.
+4. RMS velocity is independent of pressure for an ideal gas.
+
+Choose the correct option.","1","2","3","4","D","chemistry","States of Matter","hard","All four statements are correct according to kinetic theory."
+"At the same temperature, which gas has the highest RMS velocity?","O₂","N₂","He","CO₂","C","chemistry","States of Matter","medium","RMS velocity is inversely proportional to √M. Helium has the lowest molar mass among the options."
+
+
+
+
+"Statement I: Real gases deviate from ideal gas behavior at high pressure and low temperature.
+Statement II: Intermolecular attractions become significant under these conditions.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","chemistry","States of Matter","easy","At low temperature and high pressure, intermolecular forces and molecular volume become important."
+"Assertion (A): An ideal gas has compressibility factor Z equal to 1.
+Reason (R): Compressibility factor is defined as Z = PV/nRT.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","chemistry","States of Matter","medium","For an ideal gas, PV = nRT and therefore Z = 1."
+"How many of the following statements are correct?
+
+1. Z < 1 indicates dominance of attractive forces.
+2. Z > 1 indicates dominance of repulsive forces.
+3. Ideal gases have Z = 1.
+4. Real gases always have Z > 1.
+
+Choose the correct option.","1","2","3","4","C","chemistry","States of Matter","hard","Statements 1, 2 and 3 are correct. Real gases may have Z less than, equal to or greater than 1."
+"Match the following:
+
+List I
+A. van der Waals constant a
+B. van der Waals constant b
+C. Compressibility factor
+D. Boyle temperature
+
+List II
+1. Correction for molecular volume
+2. Temperature at which gas obeys Boyle's law over a wide pressure range
+3. Measure of deviation from ideality
+4. Correction for intermolecular attraction
+
+Choose the correct option.","A-4, B-1, C-3, D-2","A-1, B-4, C-3, D-2","A-4, B-3, C-1, D-2","A-2, B-1, C-3, D-4","A","chemistry","States of Matter","hard","The constant a corrects for attractive forces while b corrects for finite molecular volume."
+"Which of the following gases is expected to have the highest value of van der Waals constant a?","He","H₂","N₂","NH₃","D","chemistry","States of Matter","medium","The constant a measures intermolecular attraction. NH₃ exhibits hydrogen bonding and stronger attractions."
+"Statement I: The van der Waals constant b is related to molecular size.
+Statement II: Larger molecules generally have larger values of b.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","chemistry","States of Matter","medium","The constant b accounts for excluded volume due to finite molecular size."
+"Assertion (A): Gases can be liquefied by increasing pressure and decreasing temperature.
+Reason (R): Lower temperature reduces kinetic energy and favors intermolecular attraction.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","chemistry","States of Matter","easy","Liquefaction becomes easier when molecular motion decreases."
+"How many of the following statements are correct?
+
+1. Critical temperature is the highest temperature at which a gas can be liquefied by pressure alone.
+2. Above critical temperature, liquefaction by pressure alone is impossible.
+3. Critical pressure is the minimum pressure required to liquefy a gas at critical temperature.
+4. Critical volume is the volume occupied by one mole of gas at critical temperature and pressure.
+
+Choose the correct option.","1","2","3","4","D","chemistry","States of Matter","hard","All four definitions are correct."
+"Which of the following gases is easiest to liquefy?","He","H₂","NH₃","Ne","C","chemistry","States of Matter","medium","Stronger intermolecular forces give higher critical temperature and easier liquefaction."
+"Which of the following statements regarding van der Waals equation is correct?","The term a corrects for molecular volume.","The term b corrects for intermolecular attraction.","The term a corrects for intermolecular attraction and b for molecular volume.","The equation applies only to ideal gases.","C","chemistry","States of Matter","easy","The van der Waals equation includes corrections for both attractions and finite molecular size."
+
+
+
+
+
+"Statement I: Vapour pressure increases with increase in temperature.
+Statement II: Increasing temperature increases the number of molecules possessing sufficient energy to escape the liquid surface.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","chemistry","States of Matter","easy","More molecules acquire sufficient kinetic energy to overcome intermolecular forces."
+"Assertion (A): Liquids boil when vapour pressure becomes equal to external pressure.
+Reason (R): At this point bubbles can form throughout the liquid.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","chemistry","States of Matter","medium","Boiling begins when vapour pressure matches surrounding pressure."
+"How many of the following statements are correct?
+
+1. Surface tension decreases with increase in temperature.
+2. Viscosity of liquids decreases with increase in temperature.
+3. Viscosity of gases increases with increase in temperature.
+4. Surface tension arises due to unbalanced intermolecular forces at the surface.
+
+Choose the correct option.","1","2","3","4","D","chemistry","States of Matter","hard","All four statements are correct."
+"Match the following:
+
+List I
+A. Sublimation
+B. Condensation
+C. Vaporization
+D. Fusion
+
+List II
+1. Solid to liquid
+2. Gas to liquid
+3. Liquid to gas
+4. Solid to gas
+
+Choose the correct option.","A-4, B-2, C-3, D-1","A-2, B-4, C-3, D-1","A-4, B-3, C-2, D-1","A-1, B-2, C-4, D-3","A","chemistry","States of Matter","easy","These are the standard names for phase transitions."
+"Which of the following possesses the highest surface tension?","Ethanol","Benzene","Water","Acetone","C","chemistry","States of Matter","medium","Strong hydrogen bonding gives water unusually high surface tension."
+"Statement I: The viscosity of liquids decreases with increasing temperature.
+Statement II: Increased temperature weakens the effect of intermolecular attractions in liquids.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","chemistry","States of Matter","medium","Higher thermal energy allows molecules to move more freely."
+"Assertion (A): Dry ice undergoes sublimation at atmospheric pressure.
+Reason (R): The liquid phase of CO₂ does not exist at 1 atm pressure.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","chemistry","States of Matter","hard","At atmospheric pressure, solid CO₂ changes directly into gas."
+"How many of the following statements are correct?
+
+1. Triple point is the temperature and pressure at which all three phases coexist.
+2. Every substance has a unique triple point.
+3. Above critical temperature, gas cannot be liquefied by pressure alone.
+4. Critical point marks the end of the liquid-vapour equilibrium curve.
+
+Choose the correct option.","1","2","3","4","D","chemistry","States of Matter","hard","All four statements are correct."
+"Which of the following has the highest vapour pressure at room temperature?","Water","Mercury","Ethanol","Diethyl ether","D","chemistry","States of Matter","hard","Diethyl ether has weak intermolecular forces and evaporates readily."
+"Which of the following statements is correct regarding boiling point?","Higher vapour pressure implies higher boiling point.","Lower intermolecular forces generally increase boiling point.","Higher intermolecular forces generally increase boiling point.","Boiling point is independent of intermolecular forces.","C","chemistry","States of Matter","easy","Stronger intermolecular attractions require more energy for molecules to escape into vapour phase."

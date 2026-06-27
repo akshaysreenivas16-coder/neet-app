@@ -13,6 +13,7 @@ function ChapterSelect(){
             .from('questions')
             .select('chapter')
             .eq('subject', subject.toLowerCase())
+            .order('id', {ascending: true})
 
         const unique = [...new Set(data.map(row =>row.chapter))]
         setChapters(unique)

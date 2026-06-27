@@ -39,7 +39,7 @@ function WaveSelect(){
     return(
         <div>
             <h1>{chapter}</h1>
-            <p>selecct a wave to Practice</p>
+            <p>select a wave to Practice</p>
             {getWaveRanges().map(({ wave, from, to })=>(
                 <button key={wave} onClick={()=>navigate(`/practice?subject=${subject}&chapter=${chapter}&wave=${wave}&from=${from}&to=${to}`)}>
                 wave {wave} ({to - from} questions)

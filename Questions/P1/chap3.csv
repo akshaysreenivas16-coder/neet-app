@@ -1,0 +1,247 @@
+question,option_a,option_b,option_c,option_d,correct_option,subject,chapter,difficulty,explanation
+
+
+
+"Statement I: A scalar quantity possesses magnitude only.
+Statement II: A vector quantity possesses both magnitude and direction.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","B","physics","Motion in a Plane","easy","These are independent definitions of scalar and vector quantities."
+"Assertion (A): Displacement is a vector quantity.
+Reason (R): Displacement requires both magnitude and direction for complete specification.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","physics","Motion in a Plane","easy","Direction is essential in specifying displacement."
+"How many of the following are vector quantities?
+
+1. Velocity
+2. Acceleration
+3. Force
+4. Speed
+
+Choose the correct option.","1","2","3","4","C","physics","Motion in a Plane","easy","Velocity, acceleration and force are vectors, whereas speed is a scalar."
+"Match the following:
+
+List I
+A. Speed
+B. Velocity
+C. Work
+D. Momentum
+
+List II
+1. Scalar
+2. Vector
+3. Scalar
+4. Vector
+
+Choose the correct option.","A-1, B-2, C-3, D-4","A-2, B-1, C-3, D-4","A-1, B-3, C-2, D-4","A-4, B-2, C-1, D-3","A","physics","Motion in a Plane","easy","Speed and work are scalars, while velocity and momentum are vectors."
+"Which of the following is a scalar quantity?","Acceleration","Momentum","Power","Displacement","C","physics","Motion in a Plane","easy","Power is scalar because it does not require direction."
+"Statement I: Two vectors are equal if they have equal magnitude and same direction.
+Statement II: Equal vectors may have different initial points.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","B","physics","Motion in a Plane","medium","Vectors can be shifted parallel to themselves without changing their nature."
+"Assertion (A): A null vector has zero magnitude.
+Reason (R): A null vector has no definite direction.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","physics","Motion in a Plane","medium","A zero vector is considered directionless because its magnitude is zero."
+"How many of the following statements are correct?
+
+1. A unit vector has magnitude one.
+2. Unit vectors specify direction.
+3. The magnitude of a unit vector is dimensionless and equal to one.
+4. A unit vector can represent any direction.
+
+Choose the correct option.","1","2","3","4","D","physics","Motion in a Plane","medium","All four statements are correct."
+"A vector of magnitude 5 units directed along positive x-axis is represented by:","5i","5j","i + j","5(i+j)","A","physics","Motion in a Plane","medium","The unit vector i represents the positive x-direction."
+"Which of the following statements is correct?","The magnitude of a vector can be negative.","The magnitude of a vector is always positive or zero.","The direction of a vector can be negative.","Unit vectors possess dimensions.","B","physics","Motion in a Plane","easy","Magnitude represents size and therefore cannot be negative."
+
+
+
+
+"Statement I: Vector addition is commutative.
+Statement II: A + B = B + A for vectors.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","physics","Motion in a Plane","easy","Vector addition follows the commutative law."
+"Assertion (A): Vector addition is associative.
+Reason (R): (A + B) + C = A + (B + C).
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","physics","Motion in a Plane","easy","The order of grouping does not affect vector addition."
+"How many of the following statements are correct?
+
+1. The triangle law can be used for vector addition.
+2. The parallelogram law can be used for vector addition.
+3. The polygon law can be used for addition of multiple vectors.
+4. Vector subtraction can be treated as addition of a negative vector.
+
+Choose the correct option.","1","2","3","4","D","physics","Motion in a Plane","medium","All four statements are correct."
+"Match the following:
+
+List I
+A. Triangle law
+B. Parallelogram law
+C. Polygon law
+D. Subtraction of vectors
+
+List II
+1. Addition of more than two vectors
+2. Addition using diagonal of parallelogram
+3. Addition of two vectors placed head to tail
+4. Addition of negative vector
+
+Choose the correct option.","A-3, B-2, C-1, D-4","A-2, B-3, C-1, D-4","A-3, B-1, C-2, D-4","A-4, B-2, C-1, D-3","A","physics","Motion in a Plane","easy","These are the standard graphical methods of vector addition."
+"Two perpendicular vectors have magnitudes 3 and 4 units. The magnitude of their resultant is:","5","6","7","8","A","physics","Motion in a Plane","medium","Resultant = √(3² + 4²) = 5 units."
+"Statement I: The maximum resultant of two vectors occurs when the angle between them is 0°.
+Statement II: The minimum resultant occurs when the angle between them is 180°.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","B","physics","Motion in a Plane","medium","Both statements are true but independent."
+"Assertion (A): Two vectors of equal magnitude can have a resultant equal to either vector.
+Reason (R): If the angle between them is 120°, the resultant equals the magnitude of each vector.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","physics","Motion in a Plane","hard","For equal vectors A, resultant R = √(A²+A²+2A²cos120°)=A."
+"Two vectors of magnitudes 5 and 12 units are perpendicular. Their resultant magnitude is:","13","15","17","19","A","physics","Motion in a Plane","medium","Resultant = √(5² + 12²) = 13 units."
+"How many of the following statements are correct?
+
+1. The magnitude of resultant can never exceed the sum of magnitudes of vectors.
+2. The magnitude of resultant can never be less than the difference of magnitudes.
+3. If two vectors are parallel, resultant equals sum of magnitudes.
+4. If two vectors are anti-parallel and equal, resultant becomes zero.
+
+Choose the correct option.","1","2","3","4","D","physics","Motion in a Plane","hard","These are standard properties of vector addition."
+"A boat moves east with velocity 6 m/s and a river flows north with velocity 8 m/s. The resultant speed of the boat relative to ground is:","8 m/s","10 m/s","12 m/s","14 m/s","B","physics","Motion in a Plane","hard","Resultant speed = √(6² + 8²) = 10 m/s."
+
+
+
+
+
+"Statement I: Any vector in a plane can be resolved into two mutually perpendicular components.
+Statement II: Vector resolution simplifies calculations in two-dimensional motion.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","physics","Motion in a Plane","easy","Resolving vectors into perpendicular components makes independent analysis possible."
+"Assertion (A): The x-component of a vector A making angle θ with positive x-axis is A cosθ.
+Reason (R): Projection of the vector on x-axis gives the x-component.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","physics","Motion in a Plane","easy","The x-component is obtained by projecting the vector onto the x-axis."
+"How many of the following statements are correct?
+
+1. Ax = A cosθ
+2. Ay = A sinθ
+3. Resultant magnitude = √(Ax² + Ay²)
+4. tanθ = Ay/Ax
+
+Choose the correct option.","1","2","3","4","D","physics","Motion in a Plane","medium","All four relations are standard vector component equations."
+"Match the following:
+
+List I
+A. Ax
+B. Ay
+C. Resultant magnitude
+D. Direction angle
+
+List II
+1. tan⁻¹(Ay/Ax)
+2. A sinθ
+3. √(Ax²+Ay²)
+4. A cosθ
+
+Choose the correct option.","A-4, B-2, C-3, D-1","A-2, B-4, C-3, D-1","A-4, B-3, C-2, D-1","A-1, B-2, C-4, D-3","A","physics","Motion in a Plane","medium","These are the fundamental component relations."
+"A vector of magnitude 10 units makes an angle of 60° with the positive x-axis. Its x-component is:","5","5√3","10","10√3","A","physics","Motion in a Plane","medium","Ax = 10 cos60° = 10 × 1/2 = 5."
+
+"A vector of magnitude 10 units makes an angle of 60° with the positive x-axis. Its y-component is:","5","5√3","10","10√3","B","physics","Motion in a Plane","medium","Ay = 10 sin60° = 10 × √3/2 = 5√3."
+
+"Assertion (A): The components of a vector are themselves vectors.
+Reason (R): Components possess both magnitude and direction along coordinate axes.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","physics","Motion in a Plane","medium","Each component acts along a specific direction and therefore is a vector."
+"A vector has components 6 units along x-axis and 8 units along y-axis. Its magnitude is:","10","12","14","16","A","physics","Motion in a Plane","easy","Magnitude = √(6²+8²)=10."
+
+"A vector has components Ax = 3 and Ay = 3√3. The angle made with positive x-axis is:","30°","45°","60°","90°","C","physics","Motion in a Plane","hard","tanθ = Ay/Ax = (3√3)/3 = √3, therefore θ = 60°."
+
+"How many of the following statements are correct?
+
+1. A vector may have a negative x-component.
+2. A vector may have a negative y-component.
+3. A vector can have both components negative.
+4. A vector with zero x-component must be parallel to y-axis.
+
+Choose the correct option.","1","2","3","4","D","physics","Motion in a Plane","medium","All four statements are correct depending on the quadrant in which the vector lies."
+
+
+
+
+
+"Statement I: Horizontal velocity remains constant during projectile motion if air resistance is neglected.
+Statement II: Acceleration acts only in the vertical direction during projectile motion.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","physics","Motion in a Plane","easy","Since gravity acts only vertically, horizontal acceleration is zero."
+"Assertion (A): The trajectory of a projectile is parabolic.
+Reason (R): Horizontal motion is uniform while vertical motion is uniformly accelerated.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","physics","Motion in a Plane","easy","Combining constant horizontal velocity and vertical acceleration gives a parabola."
+"How many of the following statements are correct?
+
+1. Time of flight is proportional to sinθ.
+2. Horizontal range is proportional to sin2θ.
+3. Maximum height is proportional to sin²θ.
+4. Range is maximum for θ = 45°.
+
+Choose the correct option.","1","2","3","4","D","physics","Motion in a Plane","medium","All four are direct consequences of projectile equations."
+"Match the following:
+
+List I
+A. Time of flight
+B. Maximum height
+C. Horizontal range
+D. Horizontal velocity
+
+List II
+1. u cosθ
+2. u²sin2θ/g
+3. u²sin²θ/2g
+4. 2usinθ/g
+
+Choose the correct option.","A-4, B-3, C-2, D-1","A-2, B-3, C-4, D-1","A-4, B-2, C-3, D-1","A-1, B-3, C-2, D-4","A","physics","Motion in a Plane","medium","These are the standard projectile formulas."
+"A projectile is launched with speed 20 m/s at an angle of 30°. Taking g = 10 m/s², the time of flight is:","1 s","2 s","3 s","4 s","B","physics","Motion in a Plane","medium","T = 2usinθ/g = 2×20×0.5/10 = 2 s."
+
+"A projectile is launched with speed 20 m/s at an angle of 30°. Taking g = 10 m/s², the maximum height reached is:","2.5 m","5 m","10 m","20 m","B","physics","Motion in a Plane","hard","H = u²sin²θ/2g = 400×0.25/20 = 5 m."
+
+"A projectile is launched with speed 20 m/s at an angle of 30°. Taking g = 10 m/s², the horizontal range is:","20√3 m","30√3 m","40√3 m","50√3 m","A","physics","Motion in a Plane","hard","R = u²sin2θ/g = 400×sin60°/10 = 40×√3/2 = 20√3 m."
+
+"Assertion (A): Two projectiles projected with angles θ and (90°−θ) have the same range.
+Reason (R): sin2θ = sin(180°−2θ).
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","physics","Motion in a Plane","hard","Complementary angles produce equal ranges."
+"A projectile has equal horizontal and vertical components of velocity at projection. The angle of projection is:","30°","45°","60°","90°","B","physics","Motion in a Plane","easy","u cosθ = u sinθ implies tanθ = 1 and θ = 45°."
+
+"How many of the following statements are correct?
+
+1. Velocity at the highest point is purely horizontal.
+2. Vertical velocity at highest point is zero.
+3. Acceleration at highest point is zero.
+4. Horizontal velocity remains constant throughout motion.
+
+Choose the correct option.","1","2","3","4","C","physics","Motion in a Plane","hard","Statements 1, 2 and 4 are correct. Acceleration remains g downward even at the highest point."
+
+
+
+
+
+"Statement I: The horizontal component of projectile velocity remains constant throughout motion.
+Statement II: Gravity acts only in the vertical direction.
+Choose the correct option.","Both statements are true and Statement II explains Statement I","Both statements are true but Statement II does not explain Statement I","Statement I is true but Statement II is false","Statement I is false but Statement II is true","A","physics","Motion in a Plane","easy","Since gravity has no horizontal component, horizontal acceleration is zero."
+"Assertion (A): A projectile projected at 45° achieves maximum range for a given speed.
+Reason (R): sin(2θ) becomes maximum when θ = 45°.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","physics","Motion in a Plane","easy","Since sin(90°)=1, the range becomes maximum at 45°."
+"How many of the following statements are correct?
+
+1. Complementary angles produce equal ranges.
+2. The time of flight for complementary angles is generally different.
+3. Maximum height for complementary angles is generally different.
+4. Range is independent of mass.
+
+Choose the correct option.","1","2","3","4","D","physics","Motion in a Plane","medium","All four statements are correct."
+"A projectile is fired with speed 50 m/s at 37°. Take sin37° = 0.6, cos37° = 0.8 and g = 10 m/s². The horizontal component of velocity is:","20 m/s","30 m/s","40 m/s","50 m/s","C","physics","Motion in a Plane","medium","ux = u cosθ = 50 × 0.8 = 40 m/s."
+
+"A projectile is fired with speed 50 m/s at 37°. The vertical component of velocity is:","20 m/s","30 m/s","40 m/s","50 m/s","B","physics","Motion in a Plane","medium","uy = u sinθ = 50 × 0.6 = 30 m/s."
+
+"A projectile is fired with speed 50 m/s at 37°. The time of flight is:","3 s","4 s","5 s","6 s","D","physics","Motion in a Plane","hard","T = 2uy/g = 2×30/10 = 6 s."
+
+"A projectile is fired with speed 50 m/s at 37°. The horizontal range is:","120 m","180 m","240 m","300 m","C","physics","Motion in a Plane","hard","R = ux × T = 40 × 6 = 240 m."
+
+"Assertion (A): At the highest point of projectile motion, speed is not zero.
+Reason (R): The horizontal component of velocity remains non-zero.
+Choose the correct option.","Both A and R are true and R is the correct explanation of A","Both A and R are true but R is not the correct explanation of A","A is true but R is false","A is false but R is true","A","physics","Motion in a Plane","medium","Only the vertical component becomes zero at the highest point."
+
+"A projectile is projected horizontally from a height of 45 m with speed 20 m/s. Taking g = 10 m/s², the time taken to hit the ground is:","2 s","3 s","4 s","5 s","B","physics","Motion in a Plane","hard","Using h = ½gt² → 45 = 5t² → t² = 9 → t = 3 s."
+
+"How many of the following statements are correct?
+
+1. Projectile motion is two-dimensional motion.
+2. Horizontal and vertical motions are independent.
+3. Horizontal acceleration is zero.
+4. Vertical acceleration is constant and equal to g downward.
+
+Choose the correct option.","1","2","3","4","D","physics","Motion in a Plane","easy","All four are fundamental properties of projectile motion."
