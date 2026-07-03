@@ -8,7 +8,7 @@ function Leaderboard(){
     const [loading, setLoading] = useState(true)
 
     useEffect(()=>{
-        async function fetchLeaderboards(params) {
+        async function fetchLeaderboards() {
             const {data} = await supabase
                 .from('weekly_test_results')
                 .select('score,total,user_id,profiles(username)')

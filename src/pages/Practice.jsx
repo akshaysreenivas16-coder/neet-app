@@ -162,7 +162,7 @@ async function updateStreak() {
                     margin: '10px 0'
                 }}>
                  <div style={{
-                    width: `${((currentIndex) / questions.length) * 100}%`,
+                    width: `${((currentIndex+1) / questions.length) * 100}%`,
                     backgroundColor: '#4caf50',
                     borderRadius: '10px',
                     height: '10px',
@@ -170,7 +170,7 @@ async function updateStreak() {
                 }}>
                  </div>
                 </div>
-            <p>{currentIndex}/{questions.length} Questions</p>
+            <p>{currentIndex+1}/{questions.length} Questions</p>
             {questions.length > 0 && (
                 <>
                 <QuestionCard 

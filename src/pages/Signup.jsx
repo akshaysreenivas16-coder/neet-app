@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, redirect } from "react-router-dom";
 import { useState} from "react";
 import supabase from "../supabase";
 
@@ -22,6 +22,18 @@ function Signup(){
         
     } 
 
+
+    async function handleGoogleLogin(){
+        const {error} = await supabase.auth.signInWithOAuth({
+            provider : 'google',
+            options : {
+                redirectTo: `${window.location.origin}/auth/callback`
+            }
+        })
+        if(error)
+            setMessage(error.message)
+    }
+
     return( 
 
         <>
@@ -43,6 +55,10 @@ function Signup(){
 
             <button onClick={handleSignup}>
                 Sign up
+            </button>
+
+            <button onClick={handleGoogleLogin}>
+                Continue with Google
             </button>
 
             {message && <p>{message}</p>}

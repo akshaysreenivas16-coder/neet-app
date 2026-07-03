@@ -15,6 +15,7 @@ import ProfileSetup from './pages/ProfileSetup';
 import Profile from './pages/Profile';
 import Leaderboard from './pages/Leaderboard';
 import WaveSelect from './pages/WaveSelect';
+import AuthCallback from './pages/AuthCallback';
 
 
 function ProtectedRoute({children}){
@@ -41,6 +42,7 @@ function App(){
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login/>}/>
+        <Route path="/auth/callback" element={<AuthCallback/>}/>
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/home" element={<ProtectedRoute><Home/></ProtectedRoute>}/>
         <Route path="/subject" element={<ProtectedRoute><SubjectSelect/></ProtectedRoute>}/>

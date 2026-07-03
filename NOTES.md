@@ -1,7 +1,7 @@
 ## App flow
 Login -> home -> start paractice -> subjectSelect -> chapterSelect -> WaveSelect -> practice
 
-1st login -> profile setup
+signup -> profile setup
 
 home 
     - practice
@@ -9,6 +9,7 @@ home
     - weekly test
     - profile
     - leaderboard
+    - logout
 
 ## Pages
 - Signup.jsx
@@ -45,5 +46,10 @@ home
 - .env (url & anon keys of supbase) 
 
 ## csv
-- questions.csv (contains questions for each chapters)
+- files are stored in PC docs
 
+## OAuth
+- google cloud is used to make signup flawless 
+
+## Database
+- profile table is mapped to auth.users (foreign key)

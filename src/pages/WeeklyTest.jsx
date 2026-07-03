@@ -67,7 +67,7 @@ function WeeklyTest(){
             const {data: qs}= await supabase
                 .from('weekly_test_questions')
                 .select('*')
-                .eq('week_number', 1)
+                .eq('week_number', 1)//change it before mvp
                 
             setQuestions(qs)
             setAllowed(true)
