@@ -24,6 +24,12 @@ function Profile(){
         fectchProfile()  
     },[])
 
+     //logout
+    async function handleLogout(){
+        await supabase.auth.signOut()
+        navigate("/")
+    }
+
     if(loading) return <p>Loading..</p>
     return(
         <div>
@@ -32,6 +38,8 @@ function Profile(){
             <p>Username: {profile?.username}</p>
             <p>Age: {profile?.age}</p>
             <button onClick={() => navigate('/home')}>Back to Home</button>
+
+            <button onClick={handleLogout} style={{display:"block", marginTop:"20px"}}>Logout</button> 
         </div>
     )
 }

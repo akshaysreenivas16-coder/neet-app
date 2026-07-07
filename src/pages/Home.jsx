@@ -19,11 +19,6 @@ function Home(){
     fetchStreak()
     },[])
 
-    //logout
-    async function handleLogout(){
-        await supabase.auth.signOut()
-        navigate("/")
-    }
 
     return(
         <div>
@@ -33,9 +28,7 @@ function Home(){
             <button onClick={()=>navigate('/dashboard')}>Dashboard</button>
             <button onClick={() => navigate('/weekly-test')}>Weekly Test</button>
             <button onClick={()=> navigate('/leaderboard')}>LeaderBoard</button>  
-            <button onClick={() => navigate('/profile')}>My Profile</button>
-           
-            <button onClick={handleLogout} style={{display:"block", marginTop:"20px"}}>Logout</button>   
+            <button onClick={() => navigate('/profile')}>My Profile</button>  
            
         </div>
     ) 
