@@ -18,13 +18,15 @@ home
 - SubjectSelect.jsx
 - chapterSelect.jsx
 - Dashboard.jsx
-- subjectDashboard.jsx
-- home.jsx
-- weeklytest.jsx
+- SubjectDashboard.jsx
+- Home.jsx
+- Weeklytest.jsx
+- WeeklyTestExam.jsx
 - ProfileSetup.jsx
 - Profile.jsx
 - LeaderBoard.jsx
 - WaveSelect.jsx
+- AuthCallback.jsx
 
 ## Component
 - Questioncard.jsx

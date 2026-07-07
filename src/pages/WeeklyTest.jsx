@@ -1,162 +1,129 @@
-import { useState, useEffect } from "react";
-import {useNavigate} from "react-router-dom"
-import supabase from "../supabase"
-import QuestionCard from "../components/QuestionCard"
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import supabase from "../supabase";
 
 function WeeklyTest(){
+     
     const navigate = useNavigate()
-    const [weekData, setWeekData] = useState(null)
-    const [alreadyTaken, setAlreadyTaken] = useState(false)
+    const [week, setWeek] = useState([])
+    const [progress, setProgress] = useState([])
+    const [results, setResult] = useState([])
     const [loading, setLoading] = useState(true)
-    const [blockReason, setBlockReason] = useState("")
-    const [questions, setQuestions] = useState([])
-    const [allowed, setAllowed] = useState(false)
-    const [score, setScore] = useState(0)
-    const [selected, setSelected] = useState(null)
-    const [answered, setAnswered] = useState(false)
-    const [currentIndex, setCurrentIndex] = useState(0)
-    const [finished, setFinished] = useState(false)
+    const [user, setUSer] = useState(null)
 
     useEffect(()=>{
-        async function checkAcces() {
-            const {data : {user}} = await supabase.auth.getUser()
+        async function fetchData(){
+            const {data: {user}} = await supabase.auth.getUser()
             if(!user) return
 
-            //getting current week
-            const {data: week} = await supabase
-                .from("weekly_tests")
+            // fetch all weeks
+            const {data: weekData} = await supabase
+                .from('weekly_tests')
                 .select('*')
-                .eq('week_number',1)//for first week change it before release
-                .single()
-            setWeekData(week)
+                .order('week_number', {ascending: true})
 
-            //check if already taken
-            const {data: results} = await supabase
-                .from('weekly_test_results')
-                .select('*')
-                .eq('user_id', user.id)
-                .eq('week_number', 1)
-                .maybeSingle()
-
-            if(results){
-                setAlreadyTaken(true)
-                setLoading(false)
-                return
-            }
-
-            //check accuracy for each chapter
-            const {data: progress} =  await supabase
+            // fecth user's progress
+            const {data: progressData} = await supabase
                 .from('user_progress')
                 .select('*')
                 .eq('user_id', user.id)
-                .eq('subject', week.subject)
-                .in('chapter', week.chapters)
-            
-            const notReady = week.chapters.filter(chapter => {
-                const row = progress?.find(p => p.chapter === chapter)
-                return !row || row.accuracy < 70
-            })
-            
-            if(notReady.length > 0){
-                setBlockReason(`you need 70%+ accuracy  in : ${notReady.join(',')}`)
-                setLoading(false)
-                return
-            }
 
-            //fetch questions
-            const {data: qs}= await supabase
-                .from('weekly_test_questions')
+            // fetch user's result
+            const {data: resultsData} = await supabase
+                .from('weekly_test_results')
                 .select('*')
-                .eq('week_number', 1)//change it before mvp
-                
-            setQuestions(qs)
-            setAllowed(true)
+                .eq('user_id', user.id)
+
+            setWeek(weekData || [])
+            setProgress(progressData || [])
+            setResult(resultsData || [])
             setLoading(false)
+
         }
-        checkAcces()
+        fetchData()
     },[])
 
-    async function handleFinish(finalScore) {
-        const {data: {user}} = await supabase.auth.getUser()
-        if(!user) return
 
-        await supabase.from('weekly_test_results').insert({
-            user_id: user.id,
-            week_number: 1,
-            score: finalScore,
-            total: questions.length
-        })   
-    }
+    function getWeekStatus(week){
+        const today =  new Date()
+        const startDate = new Date(week.start_date)
+        const endDate = new Date(week.end_date)
 
-    function checkAnswer(option){
-        setSelected(option)
-        setAnswered(true)
-        if(option === questions[currentIndex].correct_option){
-            setScore(prev => prev + 1)
+        // check if already taken 
+        const result = results.find(r => r.week_number === week.week_number)
+        if(result) return { status :'completed' , score: result.score , total: result.total}
+
+        //check if its upcoming
+        if(today < startDate) return {status : 'upcoming'}
+
+        //check if expired
+        if( today > endDate) return {status : 'expired'}
+
+
+        //check accuracy gate
+        const notReady = week.chapters.filter(chapter => {
+            const row = progress.find(p => p.chapter === chapter)
+            return !row || row.accuracy < 70
+        })
+
+        if (notReady.length > 0) {
+            return { status: 'locked', reason: `Need 70%+ accuracy in: ${notReady.join(', ')}`}
         }
+
+        return { status: 'unlocked'}
     }
 
-    function handleNext(){
-        if (currentIndex + 1 >= questions.length){
-            handleFinish( score + (selected === questions[currentIndex].correct_option? 1 : 0))
-            setFinished(true)
-        }else{
-            setCurrentIndex(currentIndex + 1)
-            setSelected(null)
-            setAnswered(false)
-        }
-    }
+    if(loading) return <p>Loading...</p>
 
-    if(loading) return <p>Loading..</p>
 
-    if(alreadyTaken) return(
+    return(
         <div>
-            <h1>Weekly Test</h1>
-            <p>You have already taken this week's test.</p>
+            <h1>Weekly Tests</h1>
+            {week.map(week => {
+                const { status, score, total, reason } = getWeekStatus(week)
+                return(
+                    <div key={week.week_number} style={{
+                        padding: '15px',
+                        margin: '10px 0',
+                        border: '1px solid #ccc',
+                        borderRadius: '10px',
+                        opacity: status === 'expired' || status === 'upcoming' ? 0.5 : 1
+                    }}>
+                        <h2>Week {week.week_number} - {week.subject}</h2>
+                        <p>Chapters: {week.chapters.join(', ')}</p>
+                        <p>{week.start_date}  → {week.end_date}</p>
+
+                        {status === 'completed' && (
+                            <p style={{ color: 'green'}}> ✓ Completed - score: {score}/{total}</p>
+                        )}
+
+                        {status === 'locked' && (
+                            <p style={{ color: 'red'}}>🔒 {reason}</p>
+                        )}
+
+                        {status === 'upcoming' && (
+                            <p style ={{ color: 'gray'}}>⏳ Upcoming</p>
+                        )}
+
+                        {status === 'expired' && (
+                            <p style ={{ color: 'gray'}}>⌛ Expired</p>
+                        )}
+
+                        {status === 'unlocked' && (
+                            <button onClick={() => navigate(`/weekly-test-exam?week=${week.week_number}`)}>
+                                Start Test
+                            </button>
+                        )} 
+
+                    </div>
+                )
+            })}
             <button onClick={() => navigate('/home')}>Back to Home</button>
+
         </div>
     )
+    
 
-    if(!allowed) return(
-        <div>
-            <h1>weekly Test Locked 🔒</h1>
-            <p>{blockReason}</p>
-            <button onClick={() => navigate('/home')}>Back to Home</button>
-        </div>
-    )
-
-    if (finished) return (
-        <div>
-            <h1>Weekly Test completed</h1>
-            <h2>Score : {score}/{questions.length}</h2>
-            <button onClick={() => navigate('/home')}>Back to Home</button>
-        </div>
-    )
-
- return(
-    <div>
-        <h1>Weekly Test - Week 1</h1>
-        <p>{currentIndex +1}/{questions.length} Questions</p>
-        <QuestionCard
-            question={questions[currentIndex]}
-            onAnswer={checkAnswer}
-            selected={selected}
-            answered={answered}
-            />
-        {answered && (
-            <div>
-                {selected === questions[currentIndex].correct_option
-                ? <p style={{color: 'green'}}>Correct!</p>
-                : <p style={{color: 'red'}}>wrong!!</p>
-                }
-                <p>{questions[currentIndex].explanation}</p>
-                <button onClick={handleNext}>
-                    {currentIndex + 1 >= questions.length? 'finish' : 'next'}
-                </button>
-            </div>
-        )}
-    </div>
- )   
 }
 
-export default WeeklyTest
+export default WeeklyTest;
