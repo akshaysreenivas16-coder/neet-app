@@ -43,6 +43,7 @@ home
 ## Intalled packages
 - react-router-dom : page navigation
 - @supabase/supabase-js : connect supabase
+- tailwindcss : @tailwindcss/vite
 
 ## gitignore
 - .env (url & anon keys of supbase) 
