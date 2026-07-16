@@ -30,6 +30,8 @@ home
 
 ## Component
 - Questioncard.jsx
+- Navbar.jsx
+- LAyout.jsx
 
 ## keyconcepts
 - useEffect 
@@ -44,6 +46,7 @@ home
 - react-router-dom : page navigation
 - @supabase/supabase-js : connect supabase
 - tailwindcss : @tailwindcss/vite
+- lucide-react : icons
 
 ## gitignore
 - .env (url & anon keys of supbase) 

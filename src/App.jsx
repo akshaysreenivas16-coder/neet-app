@@ -17,6 +17,7 @@ import Profile from './pages/Profile';
 import Leaderboard from './pages/Leaderboard';
 import WaveSelect from './pages/WaveSelect';
 import AuthCallback from './pages/AuthCallback';
+import Layout from './components/Layout';
 
 
 
@@ -46,18 +47,18 @@ function App(){
         <Route path="/" element={<Login/>}/>
         <Route path="/auth/callback" element={<AuthCallback/>}/>
         <Route path="/signup" element={<Signup/>}/>
-        <Route path="/home" element={<ProtectedRoute><Home/></ProtectedRoute>}/>
-        <Route path="/subject" element={<ProtectedRoute><SubjectSelect/></ProtectedRoute>}/>
-        <Route path="/practice" element={<ProtectedRoute><Practice/></ProtectedRoute>}/>
-        <Route path="/chapters/:subject" element={<ProtectedRoute><ChapterSelect/></ProtectedRoute>}/>
-        <Route path="/dashboard" element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/>   
-        <Route path="/dashboard/:subject" element={<ProtectedRoute><SubjectDashboard/></ProtectedRoute>}/>
-        <Route path="/weekly-test" element={<ProtectedRoute><WeeklyTest/></ProtectedRoute>} />
-        <Route path='/weekly-test-exam' element={<ProtectedRoute><WeeklyTestExam/></ProtectedRoute>}/>
-        <Route path="/profile-setup" element={<ProtectedRoute><ProfileSetup/></ProtectedRoute>}/>
-        <Route path="/profile" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
-        <Route path="/leaderboard" element={<ProtectedRoute><Leaderboard/></ProtectedRoute>}/>    
-        <Route path="/wave/:subject" element={<ProtectedRoute><WaveSelect/></ProtectedRoute>}/>
+        <Route path="/home" element={<ProtectedRoute><Layout><Home/></Layout></ProtectedRoute>}/>
+        <Route path="/subject" element={<ProtectedRoute><Layout><SubjectSelect/></Layout></ProtectedRoute>}/>
+        <Route path="/practice" element={<ProtectedRoute><Layout><Practice/></Layout></ProtectedRoute>}/>
+        <Route path="/chapters/:subject" element={<ProtectedRoute><Layout><ChapterSelect/></Layout></ProtectedRoute>}/>
+        <Route path="/dashboard" element={<ProtectedRoute><Layout><Dashboard/></Layout></ProtectedRoute>}/>   
+        <Route path="/dashboard/:subject" element={<ProtectedRoute><Layout><SubjectDashboard/></Layout></ProtectedRoute>}/>
+        <Route path="/weekly-test" element={<ProtectedRoute><Layout><WeeklyTest/></Layout></ProtectedRoute>} />
+        <Route path='/weekly-test-exam' element={<ProtectedRoute><Layout><WeeklyTestExam/></Layout></ProtectedRoute>}/>
+        <Route path="/profile-setup" element={<ProtectedRoute><Layout><ProfileSetup/></Layout></ProtectedRoute>}/>
+        <Route path="/profile" element={<ProtectedRoute><Layout><Profile/></Layout></ProtectedRoute>}/>
+        <Route path="/leaderboard" element={<ProtectedRoute><Layout><Leaderboard/></Layout></ProtectedRoute>}/>    
+        <Route path="/wave/:subject" element={<ProtectedRoute><Layout><WaveSelect/></Layout></ProtectedRoute>}/>
       </Routes>
     </BrowserRouter>
   )
