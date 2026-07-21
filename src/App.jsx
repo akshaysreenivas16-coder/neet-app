@@ -9,7 +9,6 @@ import SubjectSelect from './pages/SubjectSelect';
 import ChapterSelect from './pages/ChapterSelect';
 import Dashboard from './pages/Dashboard';
 import SubjectDashboard from './pages/SubjectDashboard';
-import Home from './pages/Home';
 import WeeklyTest from './pages/WeeklyTest';
 import WeeklyTestExam from './pages/WeeklyTestExam';
 import ProfileSetup from './pages/ProfileSetup';
@@ -47,9 +46,8 @@ function App(){
         <Route path="/" element={<Login/>}/>
         <Route path="/auth/callback" element={<AuthCallback/>}/>
         <Route path="/signup" element={<Signup/>}/>
-        <Route path="/home" element={<ProtectedRoute><Layout><Home/></Layout></ProtectedRoute>}/>
         <Route path="/subject" element={<ProtectedRoute><Layout><SubjectSelect/></Layout></ProtectedRoute>}/>
-        <Route path="/practice" element={<ProtectedRoute><Layout><Practice/></Layout></ProtectedRoute>}/>
+        <Route path="/practice" element={<ProtectedRoute><Practice/></ProtectedRoute>}/>
         <Route path="/chapters/:subject" element={<ProtectedRoute><Layout><ChapterSelect/></Layout></ProtectedRoute>}/>
         <Route path="/dashboard" element={<ProtectedRoute><Layout><Dashboard/></Layout></ProtectedRoute>}/>   
         <Route path="/dashboard/:subject" element={<ProtectedRoute><Layout><SubjectDashboard/></Layout></ProtectedRoute>}/>

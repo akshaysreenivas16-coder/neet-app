@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { X } from "lucide-react"
 import supabase from "../supabase";
 
 function WaveSelect(){
@@ -37,15 +38,23 @@ function WaveSelect(){
     if(loading) return <p>Loading...</p>
 
     return(
-        <div>
-            <h1>{chapter}</h1>
-            <p>select a wave to Practice</p>
-            {getWaveRanges().map(({ wave, from, to })=>(
-                <button key={wave} onClick={()=>navigate(`/practice?subject=${subject}&chapter=${chapter}&wave=${wave}&from=${from}&to=${to}`)}>
-                wave {wave} ({to - from} questions)
-                </button>
-            ))}
-             <button onClick={() => navigate(`/chapters/${subject}`)}>Back</button>
+        <div className="bg-[#bee9e8] min-h-screen px-6 py-8 ">
+            <div className="bg-white p-3 rounded-2xl max-w-md mx-auto">
+                <div className="flex items-center justify-between max-w-md mx-auto pb-8">
+                    <h1 className="text-[#1b4965] text-lg font-bold">{chapter}</h1>
+                    <button onClick={()=>navigate(`/chapters/${subject}`)}>< X size={24}/></button>
+                </div>
+                <div className="max-w-md mx-auto space-y-1.5">
+                    <p className="pb-3 text-[#1b4965] font-bold">Select a wave to Practice</p>
+                    {getWaveRanges().map(({ wave, from, to })=>(
+                        <button key={wave}
+                        onClick={()=>navigate(`/practice?subject=${subject}&chapter=${chapter}&wave=${wave}&from=${from}&to=${to}`)}
+                        className="bg-white flex rounded-2xl w-full p-4 text-[#1b4965] font-bold ring-2 ring-[#5fa8d3]/30 hover:bg-[#cae9ff] transition">
+                        Wave {wave} - ({to - from} questions)
+                        </button>
+                    ))}
+                </div>
+            </div>
         </div>
     )
 }

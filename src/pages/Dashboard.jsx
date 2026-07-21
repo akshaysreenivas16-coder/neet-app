@@ -58,7 +58,6 @@ function Dashboard(){
                 )
             })}
             </div>
-            <button onClick={()=>navigate('/home')} style={{marginTop:'20px'}}>back to home</button>
         </div>
     )
 }

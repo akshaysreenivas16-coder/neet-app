@@ -37,8 +37,7 @@ function Profile(){
             <p>Name : {profile?.name}</p>
             <p>Username: {profile?.username}</p>
             <p>Age: {profile?.age}</p>
-            <button onClick={() => navigate('/home')}>Back to Home</button>
-
+            
             <button onClick={handleLogout} style={{display:"block", marginTop:"20px"}}>Logout</button> 
         </div>
     )

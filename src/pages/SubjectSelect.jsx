@@ -1,20 +1,27 @@
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function SubjectSelect(){
 
     const navigate = useNavigate()
-    const Subjects = ['Biology' ,'Chemistry' ,'Physics']
+    const Subjects = [
+        {name:'Biology', emoji:'🧬'},
+        {name:'Chemistry',emoji:'⚗️'},
+        {name:'Physics',emoji:'⚡'}
+    ]
 
     return(
-        <div>
-            <h1>SELECT SUBJECT</h1>
-            {Subjects.map((subject)=>(
-                <button
-                key={subject}
-                onClick={()=> navigate(`/chapters/${subject}`)}>
-                    {subject}
-                </button>
-            ))}
-               <button onClick={()=>navigate('/home')} style={{marginTop:'20px', display:"block"}}>back to home</button>
+        <div className="min-h-screen bg-[#bee9e8] px-6 py-8">
+            <h1 className="text-lg font-bold text-[#1b4965] pb-5 max-w-md mx-auto">SELECT SUBJECT</h1>
+                <div className="space-y-1.5 max-w-md mx-auto">
+                    {Subjects.map((subject)=>(
+                        <button
+                        key={subject.name}
+                        onClick={()=> navigate(`/chapters/${subject.name}`)}
+                        className="bg-white rounded-2xl p-5 w-full text-[#1b4965] font-bold text-lg ring-2 ring-[#5fa8d3]/30 shadow-lg hover:bg-[#cae9ff] transition flex items-center gap-4">
+                            <span>{subject.emoji}</span>
+                            <span>{subject.name}</span>
+                        </button>
+                    ))}
+                </div>
         </div>
     )
 }

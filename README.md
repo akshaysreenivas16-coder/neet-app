@@ -26,7 +26,6 @@ A gamified NEET preparation platform built with React and Supabase.
 ## Pages
 - Login / Signup
 - Profile Setup (first time users)
-- Home — central hub with streak display
 - Subject Select
 - Chapter Select
 - Wave Select — questions split into 3 waves

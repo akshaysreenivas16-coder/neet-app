@@ -1,7 +1,7 @@
 function QuestionCard({ question, onAnswer, selected, answered }) {
   return (
     <div>
-      <p>
+      <p className="pb-5">
         {question.question.split('\n').map((line, i) => (
         <span key={i}>{line}<br/></span>
         ))}
@@ -10,14 +10,13 @@ function QuestionCard({ question, onAnswer, selected, answered }) {
         <button
           key={opt}
           onClick={() => !answered && onAnswer(opt)}
+          className="w-full items text-base text-left border-2 border-[#5fa8d3]/30 p-2 rounded-2xl p-3 mb-2"
           style={{
-            display: 'block',
-            margin: '5px',
             backgroundColor: answered
               ? opt === question.correct_option
-                ? 'green'
+                ? '#bee9e8'
                 : opt === selected
-                ? 'red'
+                ? '#ffcdd2'
                 : 'white'
               : 'white'
           }}

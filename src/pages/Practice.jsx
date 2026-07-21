@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { X } from "lucide-react";
 import supabase from "../supabase";
 import QuestionCard from '../components/QuestionCard'
 import { useNavigate, useSearchParams} from "react-router-dom";
@@ -130,74 +131,99 @@ async function updateStreak() {
     //final score screen
    if(!loading && currentIndex >= questions.length){
     return(
-        <div>
-            <h1>Quiz Completed! 🎉</h1>
-            <h2>You got {score} out of {questions.length} correct</h2>
-            {score === questions.length 
-                ? <p>Perfect score! 🌟</p>
-                : score >= questions.length / 2
-                ? <p>Good job! Keep practicing 💪</p>
-                : <p>Keep going, you'll get better! 📚</p>
-            }
-            <button onClick={() => {
-                setCurrentIndex(0)
-                setScore(0)
-                setSelected(null)
-                setAnswered(false)
-            }}>
-                Try Again</button>
-              <button onClick={() => navigate(`/wave/${subject}?chapter=${chapter}`)}>Back</button>
+        
+        <div className="min-h-screen bg-[#bee9e8] px-2 py-1 flex items-center">
+            <div className="bg-white px-2 py-2 rounded-2xl max-w-md w-full mx-auto shadow-lg min-h-[calc(100vh-2rem)] flex flex-col justify-between">
+                <div className="flex flex-col items-center justify-center flex-1 ">
+                <h2 className="text-center text-2xl font-bold text-[#1b4965] mb-1">Practice Completed!</h2>
+                <p className="text-center text-gray-500 mb-4">You got {score} out of {questions.length} correct</p>
+                {score === questions.length 
+                    ? <p className="text-center text-[#fb8b24] font-semibold">Perfect score! 🌟</p>
+                    : score >= questions.length / 2
+                    ? <p className="text-center text-green-600 font-semibold">Good job! Keep practicing 💪</p>
+                    : <p className="text-center text-red-500 font-semibold">Keep going, you'll get better! 📚</p>
+                }
+                </div>
+                <div>
+                    <button onClick={() => {
+                        setCurrentIndex(0)
+                        setScore(0)
+                        setSelected(null)
+                        setAnswered(false)
+                    }}className="mt-6 w-full bg-[#1b4965]/80 text-white py-3 rounded-xl font-semibold hover:bg-[#0d1b2a] transition ">
+                        Try Again
+                    </button>
+                    <button 
+                        onClick={() => navigate(`/wave/${subject}?chapter=${chapter}`)} className="mt-2 w-full bg-[#1b4965] text-white py-3 rounded-xl font-semibold hover:bg-[#0d1b2a] transition">
+                        Back to waves
+                    </button>
+                </div>
+            </div>
         </div>
         )
     }
     return(
 
-        <div>
-            <h1>NEET Practice</h1>
-                <div style={{
-                    width: '100%',
-                    backgroundColor: '#e0e0e0',
-                    borderRadius: '10px',
-                    height: '10px',
-                    margin: '10px 0'
-                }}>
-                 <div style={{
-                    width: `${((currentIndex+1) / questions.length) * 100}%`,
-                    backgroundColor: '#4caf50',
-                    borderRadius: '10px',
-                    height: '10px',
-                    transition: 'width 0.3s ease'
-                }}>
-                 </div>
-                </div>
-            <p>{currentIndex+1}/{questions.length} Questions</p>
-            {questions.length > 0 && (
-                <>
-                <QuestionCard 
-                    question={questions[currentIndex]}
-                    onAnswer={checkAnswer}
-                    selected={selected}
-                    answered={answered}
-                    />
-                {answered && (
-                    <div>
-                        {selected === questions[currentIndex].correct_option 
-                        ? <p style={{color:"green"}}>Correct!</p>
-                        : <p style={{color:"red"}}>Wrong!</p>
-                        }
-                        <p>{questions[currentIndex].explanation}</p>
+        <div className="bg-[#bee9e8] min-h-screen px-2 py-2">
+            <div className="bg-white p-4 rounded-2xl max-w-md mx-auto min-h-[calc(100vh-2rem)] flex flex-col">
+               
+                {/* Top - progress */}
+                <div>
+                    <h1 className="flex justify-between">
+                        <span>
+                            NEET Practice
+                        </span>
+                        <button onClick={()=>navigate(`/wave/${subject}?chapter=${chapter}`)}>
+                            <X />
+                        </button>
+                    </h1>
+                    <div className="w-full bg-gray-200 rounded-full h-2.5 my-2">
+                        <div className="bg-green-500 h-2.5 rounded-full transition-all duration-300" 
+                            style={{
+                            width: `${((currentIndex+1) / questions.length) * 100}%`}}>
+                        </div>
                     </div>
-                )}
+                    <p className="text-sm text-gray-500 mb-3">{currentIndex+1}/{questions.length} Questions</p>
+                </div>
 
+                {/* Middle - question + options */}
+                <div className="flex-1">
+                    {questions.length > 0 && (
+                        <>
+                        <QuestionCard 
+                            question={questions[currentIndex]}
+                            onAnswer={checkAnswer}
+                            selected={selected}
+                            answered={answered}
+                        />
+                        {answered && (
+                            <div>
+                                {selected === questions[currentIndex].correct_option 
+                                ? <p className="text-green-600 font-semibold mt-2">Correct!</p>
+                                : <p className="text-red-600 font-semibold mt-2">Wrong!</p>
+                                }
+                                <p className="text-gray-600 text-sm mt-2 p-3 rounded-lg">
+                                    {questions[currentIndex].explanation}
+                                </p>
+                            </div>
+                        )}
+                        </>
+                    )}
+                </div>
+
+                {/* Bottom - next button*/}
                 {answered && (
                     <button onClick={()=>{
                         setCurrentIndex(currentIndex+1)
                         setSelected(null)
                         setAnswered(false)
-                    }}>Next</button>
+                    }}
+                    className="mt-4 w-full bg-[#1b4965] text-white py-3 rounded-xl font-semibold hover:bg-[#0d1b2a] transition">
+                        Next
+                    </button>
                 )}
-                </>
-            )}
+            </div> 
+            
         </div>
     )
 }

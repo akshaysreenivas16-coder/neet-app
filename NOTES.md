@@ -19,7 +19,6 @@ home
 - chapterSelect.jsx
 - Dashboard.jsx
 - SubjectDashboard.jsx
-- Home.jsx
 - Weeklytest.jsx
 - WeeklyTestExam.jsx
 - ProfileSetup.jsx

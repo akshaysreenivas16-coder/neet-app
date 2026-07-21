@@ -24,7 +24,7 @@ function Login(){
                 .maybeSingle()
             
             if (profile){
-                navigate('/home')
+                navigate('/subject')
             }else{
                 navigate('/profile-setup')
             }

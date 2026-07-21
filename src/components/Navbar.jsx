@@ -36,8 +36,7 @@ function Navbar(){
             {/* Top bar */}
             <div className="bg-[#1b4965] flex justify-between items-center px-6 py-4">
                 {/* Left - app name */}
-                <p className="text-white text-xl font-bold cursor-pointer"
-                    onClick={()=>navigate('/home')}>
+                <p className="text-white text-xl font-bold">
                     Neetly
                 </p>
                 <div className="flex items-center gap-6">
@@ -72,14 +71,15 @@ function Navbar(){
                         } `}>
                             <Trophy size={16}/>
                             Leaderboard</button>
-                        <span className="text-[#fb8b24] font-bold">🔥 {streak}</span>
+                        <span className="text-[#fb8b24] items-center px-4 py-2 font-bold">🔥 {streak}</span>
                     </div>
                     {/* Right - greeetings + profile icon*/}
                     <div className="flex items-center gap-3">
                         <span className="text-[#fb8b24] font-bold text-sm md:hidden">🔥 {streak}</span>
                         <button 
                             onClick={()=> navigate('/profile')}
-                            className="flex items-center gap-3 bg-[#62b6cb] text-white pl-5 px-2 py-2 rounded-full text-sm font-semibold hover:bg-[#5fa8d3] transition">
+                            className={`flex items-center gap-3 bg-[#62b6cb] text-white pl-5 px-2 py-2 rounded-full text-sm font-semibold hover:bg-[#5fa8d3] transition ${
+                            location.pathname === '/profile' ? 'ring-2 ring-[#bee9e8]' : ""}`}>
                                 <span>Hi, {name}</span>
                                 <span className="bg-white text-[#1b4965] rounded-full w-7 h-7 flex items-center justify-center">
                                     {name.charAt(0).toUpperCase()}
@@ -92,36 +92,36 @@ function Navbar(){
                 <div className="fixed bottom-0 right-0 left-0 bg-[#1b4965] flex justify-around items-center py-3 md:hidden">
                     <button 
                         onClick={()=>navigate('/subject')}
-                        className={`flex flex-col items-center text-xs gap-1 ${
+                        className={`flex flex-col items-center  px-2 py-2 rounded-full text-xs text-medium gap-2 transition ${
                             location.pathname === '/subject' || location.pathname.startsWith('/chapters') || location.pathname.startsWith('/wave') || location.pathname.startsWith('/practice')
-                            ? 'text-[#fb8b24]'
+                            ? 'bg-[#bee9e8] text-[#1b4965]'
                             : 'text-white'
                         }`}>
                           <BookText size={24}/>
                     </button>
                     <button 
                         onClick={()=>navigate('/dashboard')}
-                        className={`p-2 rounded-xl transition ${
+                        className={`flex flex-col items-center  px-2 py-2 rounded-full text-xs text-medium gap-2 transition  ${
                             location.pathname.startsWith('/dashboard')
-                            ? 'text-[#fb8b24]'
+                            ? 'bg-[#bee9e8] text-[#1b4965]'
                             : 'text-white'
                         } `}>
                         <ChartPie size={24}/>
                     </button>
                     <button 
                         onClick={()=>navigate('/weekly-test')}
-                        className={`p-2 rounded-xl transition ${
+                        className={`flex flex-col items-center  px-2 py-2 rounded-full text-xs text-medium gap-2 transition ${
                             location.pathname.startsWith('/weekly-test')
-                            ? 'text-[#fb8b24]'
+                            ? 'bg-[#bee9e8] text-[#1b4965]'
                             : 'text-white'
                         }`}>
                         <ClipboardPenLine size={24}/>
                     </button>
                     <button 
                         onClick={()=>navigate('/leaderboard')}
-                        className={`p-2 rounded-xl transition ${
+                        className={`flex flex-col items-center  px-2 py-2 rounded-full text-xs text-medium gap-2 transition ${
                             location.pathname.startsWith('/leaderboard')
-                            ? 'text-[#fb8b24]'
+                            ? 'bg-[#bee9e8] text-[#1b4965]'
                             : 'text-white'
                         }`}>
                             <Trophy size={24}/>

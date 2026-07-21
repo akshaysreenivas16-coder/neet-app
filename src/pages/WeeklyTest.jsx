@@ -118,8 +118,6 @@ function WeeklyTest(){
                     </div>
                 )
             })}
-            <button onClick={() => navigate('/home')}>Back to Home</button>
-
         </div>
     )
     
