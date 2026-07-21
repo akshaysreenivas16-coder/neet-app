@@ -1,5 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { X } from "lucide-react"
 import supabase from "../supabase";
 
 function SubjectDashboard(){
@@ -35,29 +36,34 @@ function SubjectDashboard(){
     }
 
     return(
-        <div>
-            <h1>{subject} - Chapter Progress</h1>
-            {chapters.length === 0
-            ?<p>Not practiced yet.</p>
-            : chapters.map(row =>(
-                <div    
-                    key={row.chapter}
-                    style={{
-                        padding: '15px',
-                        margin: '10px 0',
-                        border: '1px solid #ccc',
-                        borderRadius: '10px',
-                        borderLeft: `5px solid ${getColor(row.accuracy)}`
-                    }}>
-                        <h3>{row.chapter}</h3>
-                        <p style={{ color:'grey', fontSize: '14px'}}>
-                            {Math.round(row.accuracy)}% accuracy - {getLabel(row.accuracy)}
-                        </p>
+        <div className="bg-[#bee9e8] min-h-screen px-2 py-6">
+            <div className="bg-white p-3 rounded-2xl max-w-md mx-auto">
+                <div className="flex items-center justify-between mb-4">
+                    <h1 className="text-lg font-bold text-[#1b4965]">{subject} - Chapter Progress</h1>
+                    <button onClick={()=>navigate('/dashboard')}>
+                        < X size={24} />
+                    </button>
                 </div>
-            ))
-            }
-        <button onClick={()=>navigate('/dashboard')}>back to Dashboard</button>
+                {chapters.length === 0
+                ?<p className="text-gray-400 text-center py-10">Not practiced yet.</p>
+                : chapters.map(row =>(
+                    <div    
+                        key={row.chapter}
+                        className="border border-gray-200 p-4 mb-3 rounded-2xl flex items-center justify-between"
+                        style={{
+                            borderLeft: `5px solid ${getColor(row.accuracy)}`
+                            }}>
+                            <div>
+                                <h3 className="font-bold text-[#1b4965]">{row.chapter}</h3>
+                                <p className="text-gray-500 text-sm"> {getLabel(row.accuracy)}</p>
+                            </div>
+                            <p className="font-bold text-[#1b4965]">{Math.round(row.accuracy)}% accuracy</p>
+                    </div>
+                ))
+                }
+            </div>
         </div>
+        
     )
 }
 export default SubjectDashboard;

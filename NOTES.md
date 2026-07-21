@@ -3,14 +3,6 @@ Login -> home -> start paractice -> subjectSelect -> chapterSelect -> WaveSelect
 
 signup -> profile setup
 
-home 
-    - practice
-    - dashboard
-    - weekly test
-    - profile
-    - leaderboard
-    - logout
-
 ## Pages
 - Signup.jsx
 - Login.jsx
@@ -30,7 +22,8 @@ home
 ## Component
 - Questioncard.jsx
 - Navbar.jsx
-- LAyout.jsx
+- Layout.jsx
+- CircleProgress.jsx
 
 ## keyconcepts
 - useEffect 
