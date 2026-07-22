@@ -132,7 +132,7 @@ async function updateStreak() {
    if(!loading && currentIndex >= questions.length){
     return(
         
-        <div className="min-h-screen bg-[#bee9e8] px-2 py-1 flex items-center">
+        <div className="min-h-screen bg-[#cae9ff] px-2 py-1 flex items-center">
             <div className="bg-white px-2 py-2 rounded-2xl max-w-md w-full mx-auto shadow-lg min-h-[calc(100vh-2rem)] flex flex-col justify-between">
                 <div className="flex flex-col items-center justify-center flex-1 ">
                 <h2 className="text-center text-2xl font-bold text-[#1b4965] mb-1">Practice Completed!</h2>
@@ -164,7 +164,7 @@ async function updateStreak() {
     }
     return(
 
-        <div className="bg-[#bee9e8] min-h-screen px-2 py-2">
+        <div className="bg-[#cae9ff] min-h-screen px-2 py-2">
             <div className="bg-white p-4 rounded-2xl max-w-md mx-auto min-h-[calc(100vh-2rem)] flex flex-col">
                
                 {/* Top - progress */}

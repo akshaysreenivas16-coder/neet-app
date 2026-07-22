@@ -36,7 +36,7 @@ function Dashboard(){
     }
 
     return(
-        <div className="bg-[#bee9e8] min-h-screen px-2 py-6">
+        <div className="bg-[#cae9ff] min-h-screen px-2 py-6">
             <div className="bg-white max-w-md mx-auto p-3 rounded-2xl">
                 <h1 className="mb-3 text-center text-lg font-semibold text-[#1b4965]">Dashboard</h1>
                 <div className="flex flex-col gap-4">
@@ -46,7 +46,7 @@ function Dashboard(){
                             <div
                                 key={subject}
                                 onClick={()=> navigate(`/dashboard/${subject}`)}
-                                className="border border-gray-300 p-3 rounded-2xl cursor-pointer flex items-center justify-between hover:bg-[#cae9ff]/30 transition">
+                                className="border border-gray-300 p-3 rounded-2xl cursor-pointer flex items-center justify-between hover:bg-[#bee9e8] transition">
                                 <div>
                                     {accuracy !== null
                                     ? <CircleProgress accuracy={accuracy}/>

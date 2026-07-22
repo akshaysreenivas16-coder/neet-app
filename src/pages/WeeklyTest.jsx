@@ -45,7 +45,8 @@ function WeeklyTest(){
 
 
     function getWeekStatus(week){
-        const today =  new Date()
+
+        const today =  new Date().toISOString().split('T')[0]
         const startDate = new Date(week.start_date)
         const endDate = new Date(week.end_date)
 
@@ -59,11 +60,10 @@ function WeeklyTest(){
         //check if expired
         if( today > endDate) return {status : 'expired'}
 
-
         //check accuracy gate
         const notReady = week.chapters.filter(chapter => {
             const row = progress.find(p => p.chapter === chapter)
-            return !row || row.accuracy < 70
+            return !row || row.accuracy < 20
         })
 
         if (notReady.length > 0) {
@@ -71,57 +71,61 @@ function WeeklyTest(){
         }
 
         return { status: 'unlocked'}
+
     }
 
     if(loading) return <p>Loading...</p>
 
-
     return(
-        <div>
-            <h1>Weekly Tests</h1>
-            {week.map(week => {
-                const { status, score, total, reason } = getWeekStatus(week)
-                return(
-                    <div key={week.week_number} style={{
-                        padding: '15px',
-                        margin: '10px 0',
-                        border: '1px solid #ccc',
-                        borderRadius: '10px',
-                        opacity: status === 'expired' || status === 'upcoming' ? 0.5 : 1
-                    }}>
-                        <h2>Week {week.week_number} - {week.subject}</h2>
-                        <p>Chapters: {week.chapters.join(', ')}</p>
-                        <p>{week.start_date}  → {week.end_date}</p>
+        <div className="bg-[#cae9ff] min-h-screen px-3 py-8">
+            <div className="bg-white p-5 rounded-2xl max-w-md mx-auto">
+                <h1 className="text-lg font-bold text-center text-[#1b4965] mb-4">Weekly Tests</h1>
+                {week.map(week => {
+                    const { status, score, total, reason } = getWeekStatus(week)
+                    return(
+                        <div key={week.week_number} 
+                        className={`border mb-2 p-5 rounded-2xl transition ${
+                            status === 'expired' || status === 'upcoming' ? 'opacity-50 border-gray-200'
+                            : status === 'completed' ? 'border-[#62b6cb] bg-[#bee9e8]/20'
+                            : status === 'unlocked' ? 'border-[#1b4965] bg-white'
+                            : 'border-red-200 bg-red-50'
+                        }`}>
+                            <h2 className="font-bold text-[#1b4965] mb-3">Week {week.week_number} - {week.subject}</h2>
+                            <p className="font-semibold mb-3">Chapters: {week.chapters.join(', ')}</p>
+                            <p className="">{week.start_date}  → {week.end_date}</p>
 
-                        {status === 'completed' && (
-                            <p style={{ color: 'green'}}> ✓ Completed - score: {score}/{total}</p>
-                        )}
+                            {status === 'completed' && (
+                                <p className="text-green-600 font-bold flex text-sm justify-between"> ✓ Completed
+                                <span>score: {score}/{total}</span>
+                                </p>
+                            )}
 
-                        {status === 'locked' && (
-                            <p style={{ color: 'red'}}>🔒 {reason}</p>
-                        )}
+                            {status === 'locked' && (
+                                <p className="text-red-500">🔒 {reason}</p>
+                            )}
 
-                        {status === 'upcoming' && (
-                            <p style ={{ color: 'gray'}}>⏳ Upcoming</p>
-                        )}
+                            {status === 'upcoming' && (
+                                <p className="text-gray-500 font-bold flex text-sm">⏳ Upcoming</p>
+                            )}
 
-                        {status === 'expired' && (
-                            <p style ={{ color: 'gray'}}>⌛ Expired</p>
-                        )}
+                            {status === 'expired' && (
+                                <p className="text-gray-500  font-bold flex text-sm">⌛ Expired</p>
+                            )}
 
-                        {status === 'unlocked' && (
-                            <button onClick={() => navigate(`/weekly-test-exam?week=${week.week_number}`)}>
-                                Start Test
-                            </button>
-                        )} 
+                            {status === 'unlocked' && (
+                                <button
+                                className="bg-[#1b4965] mt-2 text-white rounded-xl w-full py-2 text-sm font-semibold hover:bg-[#62b6cb]" 
+                                onClick={() => navigate(`/weekly-test-exam?week=${week.week_number}`)}>
+                                    Start Test
+                                </button>
+                            )} 
 
-                    </div>
-                )
-            })}
+                        </div>
+                    )
+                })}
+            </div>    
         </div>
     )
-    
-
 }
 
 export default WeeklyTest;

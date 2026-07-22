@@ -38,7 +38,7 @@ function WaveSelect(){
     if(loading) return <p>Loading...</p>
 
     return(
-        <div className="bg-[#bee9e8] min-h-screen px-6 py-8 ">
+        <div className="bg-[#cae9ff] min-h-screen px-6 py-8 ">
             <div className="bg-white p-3 rounded-2xl max-w-md mx-auto">
                 <div className="flex items-center justify-between max-w-md mx-auto pb-8">
                     <h1 className="text-[#1b4965] text-lg font-bold">{chapter}</h1>
@@ -49,7 +49,7 @@ function WaveSelect(){
                     {getWaveRanges().map(({ wave, from, to })=>(
                         <button key={wave}
                         onClick={()=>navigate(`/practice?subject=${subject}&chapter=${chapter}&wave=${wave}&from=${from}&to=${to}`)}
-                        className="bg-white flex rounded-2xl w-full p-4 text-[#1b4965] font-bold ring-2 ring-[#5fa8d3]/30 hover:bg-[#cae9ff] transition">
+                        className="bg-white flex rounded-2xl w-full p-4 text-[#1b4965] font-bold ring-2 ring-[#5fa8d3]/30 hover:bg-[#bee9e8] transition">
                         Wave {wave} - ({to - from} questions)
                         </button>
                     ))}
