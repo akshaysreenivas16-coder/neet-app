@@ -170,7 +170,7 @@ async function updateStreak() {
                 {/* Top - progress */}
                 <div>
                     <h1 className="flex justify-between">
-                        <span>
+                        <span className="text-[#1b4965] font-bold">
                             NEET Practice
                         </span>
                         <button onClick={()=>navigate(`/wave/${subject}?chapter=${chapter}`)}>
@@ -202,7 +202,7 @@ async function updateStreak() {
                                 ? <p className="text-green-600 font-semibold mt-2">Correct!</p>
                                 : <p className="text-red-600 font-semibold mt-2">Wrong!</p>
                                 }
-                                <p className="text-gray-600 text-sm mt-2 p-3 rounded-lg">
+                                <p className="text-gray-600 text-sm mt-2 p-3">
                                     {questions[currentIndex].explanation}
                                 </p>
                             </div>
@@ -212,6 +212,7 @@ async function updateStreak() {
                 </div>
 
                 {/* Bottom - next button*/}
+
                 {answered && (
                     <button onClick={()=>{
                         setCurrentIndex(currentIndex+1)
@@ -219,7 +220,7 @@ async function updateStreak() {
                         setAnswered(false)
                     }}
                     className="mt-4 w-full bg-[#1b4965] text-white py-3 rounded-xl font-semibold hover:bg-[#0d1b2a] transition">
-                        Next
+                        {currentIndex+1 >= questions.length ? 'Finish': 'next'}
                     </button>
                 )}
             </div> 

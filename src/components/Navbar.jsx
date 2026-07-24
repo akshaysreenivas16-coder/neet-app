@@ -34,9 +34,9 @@ function Navbar(){
     return(
         <div>
             {/* Top bar */}
-            <div className="bg-[#1b4965] flex justify-between items-center px-6 py-4">
+            <div className="bg-[#1b4965] flex justify-between items-center px-3 py-4">
                 {/* Left - app name */}
-                <p className="text-white text-xl font-bold">
+                <p className="text-white text-2xl font-bold ">
                     Neetly
                 </p>
                 <div className="flex items-center gap-6">
@@ -74,7 +74,7 @@ function Navbar(){
                         <span className="text-[#fb8b24] items-center px-4 py-2 font-bold">🔥 {streak}</span>
                     </div>
                     {/* Right - greeetings + profile icon*/}
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2">
                         <span className="text-[#fb8b24] font-bold text-sm md:hidden">🔥 {streak}</span>
                         <button 
                             onClick={()=> navigate('/profile')}

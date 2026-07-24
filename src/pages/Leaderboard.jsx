@@ -66,7 +66,7 @@ function Leaderboard(){
             <div className="bg-white p-5 rounded-2xl max-w-md mx-auto">
                 <h1 className="mb-4 text-center">LeaderBoard -  Week {currentWeek || '-'}</h1>
                 {scores.length === 0
-                ?<p>No scores yet this Week</p>
+                ?<p className="text-center">No scores yet this Week</p>
                 : scores.map((entry, index)=>(
                     <div key={entry.user_id}
                         className={`flex items-center justify-between p-4 rounded-2xl ${

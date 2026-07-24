@@ -47,8 +47,8 @@ function WeeklyTest(){
     function getWeekStatus(week){
 
         const today =  new Date().toISOString().split('T')[0]
-        const startDate = new Date(week.start_date)
-        const endDate = new Date(week.end_date)
+        const startDate = week.start_date
+        const endDate = week.end_date
 
         // check if already taken 
         const result = results.find(r => r.week_number === week.week_number)
