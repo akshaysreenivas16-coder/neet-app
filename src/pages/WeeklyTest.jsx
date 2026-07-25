@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Atom } from 'react-loading-indicators'
 import supabase from "../supabase";
 
 function WeeklyTest(){
@@ -74,7 +75,11 @@ function WeeklyTest(){
 
     }
 
-    if(loading) return <p>Loading...</p>
+    if(loading) return (
+        <div className="bg-[#cae9ff] min-h-screen mx-auto flex items-center justify-center">
+            <Atom color="#1b4965" size="medium"/>
+        </div>
+    )
 
     return(
         <div className="bg-[#cae9ff] min-h-screen px-3 py-8">

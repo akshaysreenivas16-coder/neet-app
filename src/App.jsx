@@ -53,7 +53,7 @@ function App(){
         <Route path="/dashboard/:subject" element={<ProtectedRoute><Layout><SubjectDashboard/></Layout></ProtectedRoute>}/>
         <Route path="/weekly-test" element={<ProtectedRoute><Layout><WeeklyTest/></Layout></ProtectedRoute>} />
         <Route path='/weekly-test-exam' element={<ProtectedRoute><WeeklyTestExam/></ProtectedRoute>}/>
-        <Route path="/profile-setup" element={<ProtectedRoute><Layout><ProfileSetup/></Layout></ProtectedRoute>}/>
+        <Route path="/profile-setup" element={<ProtectedRoute><ProfileSetup/></ProtectedRoute>}/>
         <Route path="/profile" element={<ProtectedRoute><Layout><Profile/></Layout></ProtectedRoute>}/>
         <Route path="/leaderboard" element={<ProtectedRoute><Layout><Leaderboard/></Layout></ProtectedRoute>}/>    
         <Route path="/wave/:subject" element={<ProtectedRoute><Layout><WaveSelect/></Layout></ProtectedRoute>}/>

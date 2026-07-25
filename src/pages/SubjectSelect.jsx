@@ -11,7 +11,7 @@ function SubjectSelect(){
     return(
         <div className="min-h-screen bg-[#cae9ff] px-6 py-8">
             <div className="bg-white p-3 rounded-2xl max-w-md mx-auto">
-                <h1 className="text-lg font-bold text-[#1b4965] pb-5 max-w-md mx-auto">SELECT SUBJECT</h1>
+                <h1 className="text-lg font-bold text-[#1b4965] text-center pb-5 max-w-md mx-auto">Start with a subject</h1>
                     <div className="space-y-1.5 max-w-md mx-auto">
                         {Subjects.map((subject)=>(
                             <button

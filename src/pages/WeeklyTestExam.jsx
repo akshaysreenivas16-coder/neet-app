@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useSearchParams} from  "react-router-dom";
 import { X } from "lucide-react";
+import { Atom } from 'react-loading-indicators'
 import supabase from "../supabase";
 import QuestionCard from "../components/QuestionCard"
 
@@ -63,7 +64,11 @@ function WeeklyTestExam(){
         }
     }
 
-    if (loading) return <p>Loading...</p>
+    if (loading) return (
+            <div className="bg-[#cae9ff] min-h-screen mx-auto flex items-center justify-center">
+                <Atom color="#1b4965" size="medium"/>
+            </div>
+        )  
 
     if (finished) return(
         <div className="bg-[#cae9ff] min-h-screen px-2 py-2">

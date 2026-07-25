@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { X } from "lucide-react"
+import { Atom } from 'react-loading-indicators'
 import supabase from "../supabase";
 
 function WaveSelect(){
@@ -35,8 +36,11 @@ function WaveSelect(){
         ]
     }
 
-    if(loading) return <p>Loading...</p>
-
+   if(loading) return (
+        <div className="bg-[#cae9ff] min-h-screen mx-auto flex items-center justify-center">
+            <Atom color="#1b4965" size="medium"/>
+        </div>
+    )
     return(
         <div className="bg-[#cae9ff] min-h-screen px-6 py-8 ">
             <div className="bg-white p-3 rounded-2xl max-w-md mx-auto">
@@ -45,11 +49,11 @@ function WaveSelect(){
                     <button onClick={()=>navigate(`/chapters/${subject}`)}>< X size={24}/></button>
                 </div>
                 <div className="max-w-md mx-auto space-y-1.5">
-                    <p className="pb-3 text-[#1b4965] font-bold">Select a wave to Practice</p>
+                    <p className="pb-3 text-[#1b4965] font-bold">Choose your wave</p>
                     {getWaveRanges().map(({ wave, from, to })=>(
                         <button key={wave}
                         onClick={()=>navigate(`/practice?subject=${subject}&chapter=${chapter}&wave=${wave}&from=${from}&to=${to}`)}
-                        className="bg-white flex rounded-2xl w-full p-4 text-[#1b4965] font-bold ring-2 ring-[#5fa8d3]/30 hover:bg-[#bee9e8] transition">
+                        className="bg-white flex rounded-2xl w-full p-4 text-[#1b4965] font-bold ring-2 ring-[#5fa8d3]/30 hover:bg-[#cae9ff] transition">
                         Wave {wave} - ({to - from} questions)
                         </button>
                     ))}

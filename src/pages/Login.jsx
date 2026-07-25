@@ -48,7 +48,7 @@ function Login(){
         <div className="min-h-screen bg-[#cae9ff] flex items-center justify-center px-2">
             <div className="bg-white p-5 rounded-2xl shadow-md w-full max-w-md">
                 <h1 className="text-3xl font-bold text-center text-[#1b4965] mb-2">Neetly</h1>
-                <p className="text-center text-gray-500 mb-8">Login to continue</p>
+                <p className="text-center text-gray-500 mb-8">Welcome back!</p>
                 <input type="email"
                     placeholder="Enter your email"
                     value={email}

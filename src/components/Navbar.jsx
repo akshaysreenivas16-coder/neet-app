@@ -80,7 +80,7 @@ function Navbar(){
                             onClick={()=> navigate('/profile')}
                             className={`flex items-center gap-3 bg-[#62b6cb] text-white pl-5 px-2 py-2 rounded-full text-sm font-semibold hover:bg-[#5fa8d3] transition ${
                             location.pathname === '/profile' ? 'ring-2 ring-[#bee9e8]' : ""}`}>
-                                <span>Hi, {name}</span>
+                                <span>Hey, {name}</span>
                                 <span className="bg-white text-[#1b4965] rounded-full w-7 h-7 flex items-center justify-center">
                                     {name.charAt(0).toUpperCase()}
                                 </span>

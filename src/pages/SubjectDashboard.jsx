@@ -39,7 +39,7 @@ function SubjectDashboard(){
         <div className="bg-[#cae9ff] min-h-screen px-2 py-6">
             <div className="bg-white p-3 rounded-2xl max-w-md mx-auto">
                 <div className="flex items-center justify-between mb-4">
-                    <h1 className="text-lg font-bold text-[#1b4965]">{subject} - Chapter Progress</h1>
+                    <h1 className="text-lg font-bold text-[#1b4965]">{subject} - Your chapter Progress</h1>
                     <button onClick={()=>navigate('/dashboard')}>
                         < X size={24} />
                     </button>

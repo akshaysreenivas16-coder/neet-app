@@ -1,5 +1,5 @@
 ## App flow
-Login -> home -> start paractice -> subjectSelect -> chapterSelect -> WaveSelect -> practice
+Login -> subjectSelect -> chapterSelect -> WaveSelect -> practice
 
 signup -> profile setup
 
@@ -39,6 +39,7 @@ signup -> profile setup
 - @supabase/supabase-js : connect supabase
 - tailwindcss : @tailwindcss/vite
 - lucide-react : icons
+- react-loading-indicators
 
 ## gitignore
 - .env (url & anon keys of supbase) 

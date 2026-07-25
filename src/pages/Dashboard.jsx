@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 import CircleProgress from "../components/CircleProgress";
 import supabase from "../supabase";
 
@@ -61,6 +62,7 @@ function Dashboard(){
                                 ? <p style={{color: getColor(accuracy)}}>{accuracy}% accuracy</p> 
                                 : <p style={{color: 'grey'}}>Not started</p>}    
                                 </div>          
+                            <ChevronRight size={20} className="text-gray-400"/>
                             </div>
                         )
                     })}
