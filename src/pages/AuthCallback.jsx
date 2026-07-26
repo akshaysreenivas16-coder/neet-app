@@ -8,8 +8,10 @@ function AuthCallback(){
 
     useEffect(()=>{
         async function handleCallback() {
-            const {data:{user}} = await supabase.auth.getUser()
-            if(!user) return
+            const {data:{session}} = await supabase.auth.getSession()
+            if(!session) return
+
+            const user = session.user
 
             const {data: profile} = await supabase
                 .from('profiles')
