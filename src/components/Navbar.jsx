@@ -25,7 +25,7 @@ function Navbar(){
                 .select('name')
                 .eq('id', user.id)
                 .single()
-            if(data)
+            if(data && data.name)
             setName(data.name)
         }
         fetchName()
@@ -82,7 +82,7 @@ function Navbar(){
                             location.pathname === '/profile' ? 'ring-2 ring-[#bee9e8]' : ""}`}>
                                 <span>Hey, {name}</span>
                                 <span className="bg-white text-[#1b4965] rounded-full w-7 h-7 flex items-center justify-center">
-                                    {name.charAt(0).toUpperCase()}
+                                    {name ? name.charAt(0).toUpperCase() : '?'}
                                 </span>
                         </button>
                     </div>

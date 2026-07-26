@@ -28,6 +28,7 @@ function Practice(){
                 .eq('subject', subject.toLowerCase())
                 .eq('chapter', chapter)
                 .range(from, to -1)
+                .order('id' , { ascending : true})
             setQuestions(data)
             setloading(false)
         }

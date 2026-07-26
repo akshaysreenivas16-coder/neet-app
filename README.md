@@ -7,7 +7,7 @@ A gamified NEET preparation platform built with React and Supabase.
 - Progress tracking with accuracy detection
 - Weak topic identification
 - Daily streak counter
-- Weekly competitive test with 80% accuracy gate
+- Weekly competitive test with 70% accuracy gate
 - Leaderboard with username display
 - Profile setup and management
 
@@ -20,7 +20,7 @@ A gamified NEET preparation platform built with React and Supabase.
 ## How to Run
 1. Clone the repo
 2. Run `npm install`
-3. Set up a Supabse project and add your credentials to `.env` file
+3. Set up a Supabase project and add your credentials to `.env` file
 4. Run `npm run dev`
 
 ## Pages

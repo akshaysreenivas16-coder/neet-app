@@ -35,6 +35,12 @@ function ProfileSetup() {
             name: name,
             age: parseInt(age)
         })
+        
+
+        if(parseInt(age) < 1 || parseInt(age) < 100){
+            setError("please enter a valid age.")
+            return
+        }
 
         if (insertError) {
             setError(insertError.message)
@@ -72,7 +78,7 @@ function ProfileSetup() {
                         <label className="text-sm font-semibold text-[#1b4965] mb-1 block">how old are you?</label>
                         <input
                             className="w-full border border-gray-300 rounded-xl mb-3 px-4 py-3 focus:outline-none focus:ring focus:ring-[#5fa8d3]"
-                            type="number"
+                            type="number" min="1" max="100"
                             placeholder="Age"
                             value={age}
                             onChange={(e) => setAge(e.target.value)}

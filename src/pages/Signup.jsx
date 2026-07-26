@@ -31,7 +31,11 @@ function Signup(){
             }
         })
         if(error)
-            setMessage(error.message)
+        setMessage(error.message)
+    }
+
+    if(password.length < 8){
+        setMessage("Password must be at least 8 characters")
     }
 
     return( 
