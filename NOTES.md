@@ -52,3 +52,6 @@ signup -> profile setup
 
 ## Database
 - profile table is mapped to auth.users (foreign key)
+
+## vercel.json 
+- its for vercel routing
