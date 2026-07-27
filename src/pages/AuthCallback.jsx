@@ -6,31 +6,21 @@ import supabase from "../supabase";
 function AuthCallback(){
     const navigate = useNavigate()
 
-    useEffect(() => {
-    async function handleCallback() {
-        // wait 2 seconds for session to establish
-        await new Promise(resolve => setTimeout(resolve, 2000))
-        
-        const { data: { session } } = await supabase.auth.getSession()
-        
-        if (!session) {
-            navigate('/')
-            return
-        }
-
-        const { data: profile } = await supabase
-            .from('profiles')
-            .select('id')
-            .eq('id', session.user.id)
-            .maybeSingle()
-
-        if (profile) {
-            navigate('/subject')
+   useEffect(() => {
+    setTimeout(async () => {
+        const { data } = await supabase.auth.getSession()
+        if (data.session) {
+            const { data: profile } = await supabase
+                .from('profiles')
+                .select('id')
+                .eq('id', data.session.user.id)
+                .maybeSingle()
+            
+            navigate(profile ? '/subject' : '/profile-setup')
         } else {
-            navigate('/profile-setup')
+            navigate('/')
         }
-    }
-    handleCallback()
+    }, 2000)
 }, [])
 
     return (
