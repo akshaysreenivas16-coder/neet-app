@@ -14,6 +14,11 @@ function Signup(){
             password : password
         })
 
+        if(password.length < 8){
+        setMessage("Password must be at least 8 characters")
+        return
+        }
+
         if(error){
             setMessage(error.message)
         }else{
