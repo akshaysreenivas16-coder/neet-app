@@ -17,27 +17,23 @@ import Leaderboard from './pages/Leaderboard';
 import WaveSelect from './pages/WaveSelect';
 import AuthCallback from './pages/AuthCallback';
 import Layout from './components/Layout';
-
-
+import { Atom } from 'react-loading-indicators';
 
 function ProtectedRoute({children}){
-  const [user, setUser] = useState(null)
-  const [loading, setLoading] = useState(true)
+    const [user, setUser] = useState(null)
+    const [loading, setLoading] = useState(true)
 
-  useEffect(()=>{
-    async function checkUser() {
-      const {data: {user}} = await supabase.auth.getUser()
-      setUser(user)
-      setLoading(false)
-    }
-    checkUser()
-  },[])
+    useEffect(()=>{
+        supabase.auth.onAuthStateChange((event, session) => {
+            setUser(session?.user || null)
+            setLoading(false)
+        })
+    },[])
 
-  if(loading) return <p>Loading..</p>
-  if(!user) return <Navigate to="/" />
-  return children
-
- }
+    if(loading) return <div className="min-h-screen bg-[#cae9ff] flex items-center justify-center"><Atom color="#1b4965" size="medium"/></div>
+    if(!user) return <Navigate to="/" />
+    return children
+}
 
 function App(){
   return(
