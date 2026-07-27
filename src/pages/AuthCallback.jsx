@@ -7,20 +7,21 @@ function AuthCallback(){
     const navigate = useNavigate()
 
  useEffect(() => {
-    supabase.auth.onAuthStateChange((event, session) => {
-        if (event === 'SIGNED_IN' && session) {
-            supabase
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+        if (session) {
+            const { data: profile } = await supabase
                 .from('profiles')
                 .select('id')
                 .eq('id', session.user.id)
                 .maybeSingle()
-                .then(({ data: profile }) => {
-                    if (profile) {
-                        navigate('/subject')
-                    } else {
-                        navigate('/profile-setup')
-                    }
-                })
+
+            subscription.unsubscribe()
+            
+            if (profile) {
+                navigate('/subject')
+            } else {
+                navigate('/profile-setup')
+            }
         }
     })
 }, [])
