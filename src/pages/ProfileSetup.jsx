@@ -15,6 +15,12 @@ function ProfileSetup() {
             return
         }
 
+        if(parseInt(age) < 1 || parseInt(age) > 100){
+            setError("please enter a valid age.")
+            return
+        }
+
+
         const {data : existing} = await supabase 
             .from('profiles')
             .select('id')
@@ -36,12 +42,6 @@ function ProfileSetup() {
             age: parseInt(age)
         })
         
-
-        if(parseInt(age) < 1 || parseInt(age) > 100){
-            setError("please enter a valid age.")
-            return
-        }
-
         if (insertError) {
             setError(insertError.message)
         } else {
