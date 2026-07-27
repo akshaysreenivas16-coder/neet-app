@@ -8,10 +8,18 @@ function AuthCallback(){
 
     useEffect(()=>{
         async function handleCallback() {
-            const {data:{session}} = await supabase.auth.getSession()
-            if(!session) return
+            const {data, error} = await supabase.auth.getSession()
 
-            const user = session.user
+            if(error || !data.session){
+                //try exchanging the hash token
+                const {data : {session}, error : sessionError} = await supabase.auth.exchangeCodeForSession(window.location.hash)
+                if(sessionError || !session){
+                    navigate('/')
+                    return
+                }
+            }
+            
+            const user = data.session?.user || session?.user
 
             const {data: profile} = await supabase
                 .from('profiles')
