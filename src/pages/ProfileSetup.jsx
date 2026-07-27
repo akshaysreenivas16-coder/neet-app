@@ -37,7 +37,7 @@ function ProfileSetup() {
         })
         
 
-        if(parseInt(age) < 1 || parseInt(age) < 100){
+        if(parseInt(age) < 1 || parseInt(age) > 100){
             setError("please enter a valid age.")
             return
         }
