@@ -1,4 +1,4 @@
-import { Link, redirect } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState} from "react";
 import supabase from "../supabase";
 
@@ -7,6 +7,7 @@ function Signup(){
     const [email, setEmail] = useState("")
     const [password, setpassword] = useState("")
     const [message, setMessage] = useState("")
+    const navigate = useNavigate()
 
     async function handleSignup() {
         const {data, error}= await supabase.auth.signUp({
@@ -22,7 +23,7 @@ function Signup(){
         if(error){
             setMessage(error.message)
         }else{
-            setMessage("Account created !, check your email to confirm")
+            Navigate('/profile-setup')
         }
         
     } 
