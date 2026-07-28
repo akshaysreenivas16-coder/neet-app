@@ -49,7 +49,7 @@ function SubjectDashboard(){
                 : chapters.map(row =>(
                     <div    
                         key={row.chapter}
-                        className="border border-gray-200 p-4 mb-3 rounded-2xl flex items-center justify-between"
+                        className="border border-gray-300 p-3 mb-3 rounded-2xl flex items-center justify-between"
                         style={{
                             borderLeft: `5px solid ${getColor(row.accuracy)}`
                             }}>

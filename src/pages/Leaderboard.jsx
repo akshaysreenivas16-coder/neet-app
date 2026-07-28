@@ -67,8 +67,8 @@ function Leaderboard(){
     )
 
     return(
-        <div className="bg-[#cae9ff] min-h-screen px-4 py-8">
-            <div className="bg-white p-5 rounded-2xl max-w-md mx-auto">
+        <div className="bg-[#cae9ff] min-h-screen px-2 py-6">
+            <div className="bg-white p-3 rounded-2xl max-w-md mx-auto">
                 <h1 className="mb-4 text-center">LeaderBoard -  Week {currentWeek || '-'}</h1>
                 {scores.length === 0
                 ?<p className="text-center">No scores yet this Week</p>

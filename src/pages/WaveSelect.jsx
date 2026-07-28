@@ -42,7 +42,7 @@ function WaveSelect(){
         </div>
     )
     return(
-        <div className="bg-[#cae9ff] min-h-screen px-6 py-8 ">
+        <div className="bg-[#cae9ff] min-h-screen px-2 py-6 ">
             <div className="bg-white p-3 rounded-2xl max-w-md mx-auto">
                 <div className="flex items-center justify-between max-w-md mx-auto pb-8">
                     <h1 className="text-[#1b4965] text-lg font-bold">{chapter}</h1>

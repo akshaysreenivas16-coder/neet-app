@@ -47,7 +47,7 @@ function Signup(){
 
         <>
 
-        <div className="min-h-screen bg-[#cae9ff] flex items-center justify-center">
+        <div className="min-h-screen bg-[#cae9ff] flex items-center justify-center px-2 pb-20">
             <div  className="bg-white p-8 rounded-2xl shadow-md w-full max-w-md">
                 <h1 className="text-3xl font-bold text-center text-[#1b4965] mb-2">Create Account</h1>
                 <p className="text-center text-gray-500 mb-10">your NEET prep starts here</p>

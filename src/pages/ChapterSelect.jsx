@@ -24,7 +24,7 @@ function ChapterSelect(){
 
    
 return(
-        <div className="min-h-screen bg-[#cae9ff] px-6 py-8"> 
+        <div className="min-h-screen bg-[#cae9ff] px-2 py-6"> 
             <div className="bg-white p-3 rounded-2xl max-w-md mx-auto">
                 <div className="flex items-center justify-between pb-5  max-w-md mx-auto">
                     <h1 className="text-lg font-bold text-[#1b4965]">{subject.toUpperCase()} - Pick a chapter</h1>

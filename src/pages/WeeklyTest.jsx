@@ -82,14 +82,14 @@ function WeeklyTest(){
     )
 
     return(
-        <div className="bg-[#cae9ff] min-h-screen px-3 py-8">
-            <div className="bg-white p-5 rounded-2xl max-w-md mx-auto">
+        <div className="bg-[#cae9ff] min-h-screen px-2 py-6">
+            <div className="bg-white p-3 rounded-2xl max-w-md mx-auto">
                 <h1 className="text-lg font-bold text-center text-[#1b4965] mb-4">Weekly Tests</h1>
                 {week.map(week => {
                     const { status, score, total, reason } = getWeekStatus(week)
                     return(
                         <div key={week.week_number} 
-                        className={`border mb-2 p-5 rounded-2xl transition ${
+                        className={`border mb-2 p-4 rounded-2xl transition ${
                             status === 'expired' || status === 'upcoming' ? 'opacity-50 border-gray-200'
                             : status === 'completed' ? 'border-[#62b6cb] bg-[#bee9e8]/20'
                             : status === 'unlocked' ? 'border-[#1b4965] bg-white'

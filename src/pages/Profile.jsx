@@ -38,7 +38,7 @@ function Profile(){
     )
     
     return(
-        <div className="bg-[#cae9ff] min-h-screen px-2 py-8">
+        <div className="bg-[#cae9ff] min-h-screen px-2 py-6">
             <div className="bg-white p-4 rounded-2xl max-w-md mx-auto">
                 <h1 className="text-xl font-bold text-[#1b4965] text-center mb-4">My profile</h1>
                 <div className="flex justify-center mb-4">
