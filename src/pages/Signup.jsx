@@ -10,20 +10,22 @@ function Signup(){
     const navigate = useNavigate()
 
     async function handleSignup() {
-        const {data, error}= await supabase.auth.signUp({
-            email: email,
-            password : password
-        })
 
         if(password.length < 8){
         setMessage("Password must be at least 8 characters")
         return
         }
 
+        const {data, error}= await supabase.auth.signUp({
+            email: email,
+            password : password
+        })
+
+
         if(error){
             setMessage(error.message)
         }else{
-            Navigate('/profile-setup')
+            navigate('/profile-setup')
         }
         
     } 
