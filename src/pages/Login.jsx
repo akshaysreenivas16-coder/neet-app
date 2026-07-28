@@ -84,6 +84,13 @@ function Login(){
                         </Link>
                 </p>
 
+                <p className="text-sm text-gray-400 text-center mt-4">
+                    By continuing you agree to our {''}
+                    <Link to="/terms" className="underline">Terms</Link>
+                    {' '}and{' '}
+                    <Link to="/privacy" className="underline">Privacy Policy</Link>
+                </p>
+
 
             </div>
         </div>

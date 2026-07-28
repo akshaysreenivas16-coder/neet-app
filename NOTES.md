@@ -6,6 +6,8 @@ signup -> profile setup
 ## Pages
 - Signup.jsx
 - Login.jsx
+- PrivacyPolicy.jsx
+- Terms.jsx
 - Practice.jsx
 - SubjectSelect.jsx
 - chapterSelect.jsx

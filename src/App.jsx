@@ -17,6 +17,8 @@ import Leaderboard from './pages/Leaderboard';
 import WaveSelect from './pages/WaveSelect';
 import AuthCallback from './pages/AuthCallback';
 import Layout from './components/Layout';
+import PrivacyPolicy from "./pages/PrivacyPolicy"
+import Terms from "./pages/Terms"
 import { Atom } from 'react-loading-indicators';
 
 function ProtectedRoute({children}){
@@ -40,6 +42,8 @@ function App(){
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login/>}/>
+        <Route path="/privacy" element={<PrivacyPolicy/>}/>
+        <Route path="/terms" element={<Terms/>}/>
         <Route path="/auth/callback" element={<AuthCallback/>}/>
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/subject" element={<ProtectedRoute><Layout><SubjectSelect/></Layout></ProtectedRoute>}/>

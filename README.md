@@ -1,6 +1,9 @@
-# NEET Prep App
+# Neetly
 
 A gamified NEET preparation platform built with React and Supabase.
+
+## Live Demo
+https://neetly-theta.vercel.app
 
 ## Features
 - Practice questions by subject and chapter
@@ -10,11 +13,13 @@ A gamified NEET preparation platform built with React and Supabase.
 - Weekly competitive test with 70% accuracy gate
 - Leaderboard with username display
 - Profile setup and management
+- Google OAuth login
 
 ## Tech Stack
 - React (Vite)
 - Supabase (Database + Auth)
 - React Router DOM
+- Tailwind CSS
 - Vercel (Hosting)
 
 ## How to Run
