@@ -27,14 +27,18 @@ function WaveSelect(){
     },[subject, chapter])
 
     function getWaveRanges(){
-        const wave = 3
-        const perWave = Math.ceil(totalQuestions/wave)
-        return [
-            {wave : 1, from:0, to: perWave},
-            {wave : 2, from:perWave, to: perWave *2},
-            {wave : 3, from:perWave*2, to: totalQuestions},
-        ]
+        const perWave = 10 
+        const numWave = Math.ceil( totalQuestions / perWave )
+        const ranges = []
+
+        for ( let i = 0; i < numWave; i++ ){
+            const from = i * perWave
+            const to = Math.min( from + perWave , totalQuestions)
+            ranges.push({wave: i + 1, from, to })
+        }
+        return ranges
     }
+
 
    if(loading) return (
         <div className="bg-[#cae9ff] min-h-screen mx-auto flex items-center justify-center">
