@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import supabase from "../supabase";
 import QuestionCard from '../components/QuestionCard'
+import FeedbackCard from "../components/Feedbackcard";
 import { useNavigate, useSearchParams} from "react-router-dom";
 
 function Practice(){
@@ -45,6 +46,13 @@ function Practice(){
         }
         saveProgress(isCorrect)
         updateStreak()
+    }
+    
+    //continue 
+    function handleContinue(){
+        setCurrentIndex( currentIndex + 1 )
+        setSelected(null)
+        setAnswered(false)
     }
 
     //saving progress
@@ -133,8 +141,8 @@ async function updateStreak() {
    if(!loading && currentIndex >= questions.length){
     return(
         
-        <div className="min-h-screen bg-[#cae9ff] px-2 py-1 flex items-center">
-            <div className="bg-white px-2 py-2 rounded-2xl max-w-md w-full mx-auto shadow-lg min-h-[calc(100vh-2rem)] flex flex-col justify-between">
+        <div className="min-h-screen bg-[#cae9ff] flex items-center">
+            <div className="bg-white px-2 py-2 max-w-md w-full mx-auto shadow-lg min-h-[calc(100vh)] flex flex-col justify-between">
                 <div className="flex flex-col items-center justify-center flex-1 ">
                 <h2 className="text-center text-2xl font-bold text-[#1b4965] mb-1">Practice Completed!</h2>
                 <p className="text-center text-gray-500 mb-4">You got {score} out of {questions.length} correct</p>
@@ -165,8 +173,8 @@ async function updateStreak() {
     }
     return(
 
-        <div className="bg-[#cae9ff] min-h-screen px-2 py-2">
-            <div className="bg-white p-4 rounded-2xl max-w-md mx-auto min-h-[calc(100vh-2rem)] flex flex-col">
+        <div className="bg-white min-h-screen">
+            <div className="bg-white p-4 max-w-md mx-auto min-h-[calc(100vh-2rem)] flex flex-col">
                
                 {/* Top - progress */}
                 <div>
@@ -190,40 +198,26 @@ async function updateStreak() {
                 {/* Middle - question + options */}
                 <div className="flex-1">
                     {questions.length > 0 && (
-                        <>
                         <QuestionCard 
                             question={questions[currentIndex]}
                             onAnswer={checkAnswer}
                             selected={selected}
                             answered={answered}
                         />
-                        {answered && (
-                            <div>
-                                {selected === questions[currentIndex].correct_option 
-                                ? <p className="text-green-600 font-semibold mt-2">Correct!</p>
-                                : <p className="text-red-600 font-semibold mt-2">Wrong!</p>
-                                }
-                                <p className="text-gray-600 text-sm mt-2 p-3">
-                                    {questions[currentIndex].explanation}
-                                </p>
-                            </div>
-                        )}
-                        </>
                     )}
                 </div>
 
-                {/* Bottom - next button*/}
-
-                {answered && (
-                    <button onClick={()=>{
-                        setCurrentIndex(currentIndex+1)
-                        setSelected(null)
-                        setAnswered(false)
-                    }}
-                    className="mt-4 w-full bg-[#1b4965] text-white py-3 rounded-xl font-semibold hover:bg-[#0d1b2a] transition">
-                        {currentIndex+1 >= questions.length ? 'Finish': 'next'}
-                    </button>
+                {/* FeedBack component */}
+                {questions.length > 0 && (
+                    <FeedbackCard
+                        answered = {answered}
+                        isCorrect = {selected === questions[currentIndex]?.correct_option}
+                        explanation = {questions[currentIndex].explanation}
+                        isLast = {currentIndex + 1 >= questions.length}
+                        onContinue = {handleContinue} 
+                    />
                 )}
+
             </div> 
             
         </div>

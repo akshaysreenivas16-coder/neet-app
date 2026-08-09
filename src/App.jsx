@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import supabase from './supabase';
 
 import Practice from "./pages/Practice";
+import FeedbackCard from './components/Feedbackcard';
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import SubjectSelect from './pages/SubjectSelect';
