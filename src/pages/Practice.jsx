@@ -174,7 +174,7 @@ async function updateStreak() {
     return(
 
         <div className="bg-white min-h-screen">
-            <div className="bg-white p-4 max-w-md mx-auto min-h-[calc(100vh-2rem)] flex flex-col">
+            <div className="p-4 max-w-md mx-auto min-h-[calc(100vh-2rem)] flex flex-col">
                
                 {/* Top - progress */}
                 <div>

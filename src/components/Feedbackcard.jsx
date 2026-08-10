@@ -34,7 +34,7 @@ function FeedbackCard({answered, isCorrect, explanation, isLast, onContinue}){
                     }}
                     className={`w-full text-white text-center py-3 rounded-xl font-semibold transition
                         ${ isCorrect ? 'bg-green-600' : 'bg-red-700'}`}>
-                        { isLast ? 'Finish' : 'Continue' }
+                            { isLast ? 'Finish' : 'Continue' }
                 </button>
             </div>
         </div>

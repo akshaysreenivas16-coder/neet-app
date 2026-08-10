@@ -4,6 +4,7 @@ import { X } from "lucide-react";
 import { Atom } from 'react-loading-indicators'
 import supabase from "../supabase";
 import QuestionCard from "../components/QuestionCard"
+import FeedbackCard from "../components/Feedbackcard";
 
 
 
@@ -53,7 +54,7 @@ function WeeklyTestExam(){
         }   
     }
 
-    function handleNext(){
+    function handleContinue(){
         if(currentIndex + 1 >= questions.length){
             handleFinish( score + (selected === questions[currentIndex].correct_option? 1:0))
             setFinished(true)
@@ -101,8 +102,8 @@ function WeeklyTestExam(){
     )
 
     return(
-        <div className="bg-[#cae9ff] min-h-screen px-2 py-2">
-            <div className="bg-white p-4 max-w-md mx-auto rounded-2xl min-h-[calc(100vh-2rem)] flex flex-col">
+        <div className="bg-white min-h-screen px-2 py-2">
+            <div className="p-4 max-w-md mx-auto rounded-2xl min-h-[calc(100vh-2rem)] flex flex-col">
                 {/* Top progress */}
                 <div>
                     <h1 className="flex justify-between">
@@ -127,28 +128,18 @@ function WeeklyTestExam(){
                         answered = {answered}
                         onAnswer = {checkAnswer}
                     />
-                
-                    {answered && (
-                        <div>
-                            {selected === questions[currentIndex].correct_option 
-                            ? <p className="text-green-600 font-semibold px-3">Correct!</p>
-                            : <p className="text-red-600 font-semibold px-3 ">wrong!</p>
-                            }
-                            <p className="text-gray-600 text-sm p-3">
-                                {questions[currentIndex].explanation}
-                            </p>
-                        </div>
-                    )}
                 </div>
 
                 <div>
-                    {answered && (
-                        <button 
-                            onClick={handleNext}
-                            className="w-full bg-[#1b4965] text-white py-3 rounded-xl">
-                                {currentIndex + 1 >= questions.length ? 'finish' : 'next'}
-                        </button>
-                    )}   
+                   {questions.length >= 0 && (
+                    <FeedbackCard
+                    answered={answered}
+                    isCorrect={selected === questions[currentIndex]}
+                    explanation={questions[currentIndex]?.explanation}
+                    isLast={currentIndex+1 >= questions.length}
+                    onContinue={handleContinue}
+                    />
+                   )}
                 </div> 
             </div>
         </div>
