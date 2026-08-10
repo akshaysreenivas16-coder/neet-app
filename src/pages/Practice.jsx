@@ -16,6 +16,7 @@ function Practice(){
     const [selected, setSelected]= useState(null)
     const [answered, setAnswered]= useState(false)
     const [score, setScore]= useState(0)
+    const [streak, setStreak] = useState(0)
     const [loading, setloading]=useState(true)
     const from = parseInt(searchParams.get('from')) || 0
     const to = parseInt(searchParams.get('to')) || 10
@@ -117,7 +118,9 @@ async function updateStreak() {
             current_streak : 1,
             last_practiced : today
         })
+        setStreak(1)
     }else if(data.last_practiced === today){
+        setStreak(data.current_streak)
         return
     }else{
         const yestarday = new Date()
@@ -133,6 +136,7 @@ async function updateStreak() {
             last_practiced: today
         }).eq('user_id', user.id)
 
+        setStreak(newStreak)
     }
 
 }
@@ -141,32 +145,56 @@ async function updateStreak() {
    if(!loading && currentIndex >= questions.length){
     return(
         
-        <div className="min-h-screen bg-[#cae9ff] flex items-center">
-            <div className="bg-white px-2 py-2 max-w-md w-full mx-auto shadow-lg min-h-[calc(100vh)] flex flex-col justify-between">
-                <div className="flex flex-col items-center justify-center flex-1 ">
-                <h2 className="text-center text-2xl font-bold text-[#1b4965] mb-1">Practice Completed!</h2>
-                <p className="text-center text-gray-500 mb-4">You got {score} out of {questions.length} correct</p>
-                {score === questions.length 
+        <div className="min-h-screen bg-[#cae9ff] px-4 py-6 flex flex-col justify-between">
+        
+            {/* Top section */}
+            <div className="flex flex-col items-center gap-4 mt-8">
+ 
+                <h2 className="text-center text-2xl font-bold text-[#1b4965] mb-1">Wave Complete!</h2>
+                <p className="text-gray-500 text-sm">{chapter}</p>  
+
+                {/* Score Board */}
+                <div className="bg-white shadow-md w-100 h-40 flex flex-col items-center justify-center">
+                    <p className="text-4xl font-bold text-[#1b4965]">{score}/{questions.length}</p>
+                    <p className="text-sm text-gray-400">score</p>
+                </div>
+                    
+                {/* Message */}
+                <div className="bg-white w-full rounded-2xl px-6 py-3 shadow-sm text-center">
+                    { score === questions.length 
                     ? <p className="text-center text-[#fb8b24] font-semibold">Perfect score! 🌟</p>
                     : score >= questions.length / 2
                     ? <p className="text-center text-green-600 font-semibold">Good job! Keep practicing 💪</p>
-                    : <p className="text-center text-red-500 font-semibold">Keep going, you'll get better! 📚</p>
-                }
+                    : <p className="text-center text-red-500 font-semibold">You'll get better! 📚</p>
+                    }
                 </div>
-                <div>
-                    <button onClick={() => {
-                        setCurrentIndex(0)
-                        setScore(0)
-                        setSelected(null)
-                        setAnswered(false)
-                    }}className="mt-6 w-full bg-[#1b4965]/80 text-white py-3 rounded-xl font-semibold hover:bg-[#0d1b2a] transition ">
-                        Try Again
-                    </button>
-                    <button 
-                        onClick={() => navigate(`/wave/${subject}?chapter=${chapter}`)} className="mt-2 w-full bg-[#1b4965] text-white py-3 rounded-xl font-semibold hover:bg-[#0d1b2a] transition">
+
+                {/* streak */}
+                <div className="bg-white rounded-2xl px-6 py-4 w-full flex items-center gap-3">
+                    <span className="text-3xl">🔥</span>
+                    <div>
+                        <p className="font-bold text-orange-500 text-lg">{streak}</p>
+                        <p className="text-sm text-gray-400">Keep it going!</p>
+                    </div>
+                </div>
+
+            </div>
+
+            {/* Bottom buttons */}
+            <div>
+                <button onClick={() => {
+                    setCurrentIndex(0)
+                    setScore(0)
+                    setSelected(null)
+                    setAnswered(false)
+                }}className="mt-6 w-full bg-[#1b4965]/80 text-white py-3 rounded-xl font-semibold hover:bg-[#0d1b2a] transition ">
+                    Try Again
+                </button>
+                <button 
+                    onClick={() => navigate(`/wave/${subject}?chapter=${chapter}`)} 
+                    className="mt-2 w-full bg-[#1b4965] text-white py-3 rounded-xl font-semibold hover:bg-[#0d1b2a] transition">
                         Back to waves
-                    </button>
-                </div>
+                </button>
             </div>
         </div>
         )
@@ -212,7 +240,7 @@ async function updateStreak() {
                     <FeedbackCard
                         answered = {answered}
                         isCorrect = {selected === questions[currentIndex]?.correct_option}
-                        explanation = {questions[currentIndex].explanation}
+                        explanation = {questions[currentIndex]?.explanation}
                         isLast = {currentIndex + 1 >= questions.length}
                         onContinue = {handleContinue} 
                     />
