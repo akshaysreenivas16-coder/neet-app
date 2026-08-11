@@ -141,6 +141,10 @@ async function updateStreak() {
 
 }
 
+// Stars
+const accuracy = Math.round((score/questions.length) * 100)
+const stars = accuracy > 80 ? 3 : accuracy > 50 ? 2 : 1 
+
     //final score screen
    if(!loading && currentIndex >= questions.length){
     return(
@@ -158,14 +162,23 @@ async function updateStreak() {
                     <p className="text-4xl font-bold text-[#1b4965]">{score}/{questions.length}</p>
                     <p className="text-sm text-gray-400">score</p>
                 </div>
-                    
+
+                {/* Stars */}
+                <div>
+                {[1, 2, 3].map((star) =>(
+                    <span key={star} className={`text-5xl ${star <= stars ? 'opacity-100' : 'opacity-20'}`}>
+                        ⭐
+                    </span>
+                ))}
+                </div>
+
                 {/* Message */}
                 <div className="bg-white w-full rounded-2xl px-6 py-3 shadow-sm text-center">
                     { score === questions.length 
                     ? <p className="text-center text-[#fb8b24] font-semibold">Perfect score! 🌟</p>
                     : score >= questions.length / 2
                     ? <p className="text-center text-green-600 font-semibold">Good job! Keep practicing 💪</p>
-                    : <p className="text-center text-red-500 font-semibold">You'll get better! 📚</p>
+                    : <p className="text-center text-gray-600 font-semibold">You'll get better! 📚</p>
                     }
                 </div>
 
