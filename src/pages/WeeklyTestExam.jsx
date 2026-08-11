@@ -72,33 +72,43 @@ function WeeklyTestExam(){
         )  
 
     if (finished) return(
-        <div className="bg-[#cae9ff] min-h-screen px-2 py-2">
-            <div className="bg-white p-4 max-w-md mx-auto rounded-2xl min-h-screen flex flex-col justify-between">
-                {/* Centered content */}
-                <div className="flex flex-col items-center justify-center flex-1 gap-2">
-                    <h1 className="text-xl text-[#1b4965] font-bold">Weekly Test complete!</h1>
-                    <div className="text-center bg-[#cae9ff] px-8 py-4 rounded-2xl">
-                        <p className="text-sm">your score</p>
-                        <p className="text-4xl font-bold text-[#1b4965]">{score}/{questions.length}</p>
-                    </div>
-                    {score >= questions.length * 0.8 
-                        ? <p className="text-green-600 font-semibold">Excellent !!</p>
-                        : score >= questions.length * 0.5 
-                        ? <p className="text-[#fb8b24] font-semibold">Good efforts</p>
-                        : <p className="text-red-600 font-semibold">Keep practicing..</p> 
+    
+        <div className="min-h-screen bg-[#cae9ff] px-4 py-6 flex flex-col justify-between">
+        
+            {/* Top section */}
+            <div className="flex flex-col items-center gap-4 mt-8">
+ 
+                <h2 className="text-center text-2xl font-bold text-[#1b4965] mb-1">Wave Complete!</h2>
+                <p className="text-gray-500 text-sm">week {weekNumber}</p>  
+
+                {/* Score Board */}
+                <div className="bg-white shadow-md w-100 h-40 flex flex-col items-center justify-center">
+                    <p className="text-4xl font-bold text-[#1b4965]">{score}/{questions.length}</p>
+                    <p className="text-sm text-gray-400">score</p>
+                </div>
+                    
+                {/* Message */}
+                <div className="bg-white w-full rounded-2xl px-6 py-3 shadow-sm text-center">
+                    { score === questions.length 
+                    ? <p className="text-center text-[#fb8b24] font-semibold">Perfect score! 🌟</p>
+                    : score >= questions.length / 2
+                    ? <p className="text-center text-green-600 font-semibold">Good job! Keep practicing 💪</p>
+                    : <p className="text-center text-red-500 font-semibold">You'll get better! 📚</p>
                     }
                 </div>
 
-                {/* Button at bottom */}
-                <div>
-                    <button 
-                        className="w-full bg-[#1b4965] text-white py-3 rounded-xl"
-                        onClick={()=>navigate('/weekly-test')}>
-                            Back to Tests
-                    </button>
-                </div>
+            </div>
+
+            {/* Bottom button */}
+            <div>
+                <button 
+                    onClick={() => navigate('/weekly-test')} 
+                    className="mt-2 w-full bg-[#1b4965] text-white py-3 rounded-xl font-semibold hover:bg-[#0d1b2a] transition">
+                        Back to weekly tests
+                </button>
             </div>
         </div>
+    
     )
 
     return(
@@ -131,10 +141,10 @@ function WeeklyTestExam(){
                 </div>
 
                 <div>
-                   {questions.length >= 0 && (
+                   {questions.length > 0 && (
                     <FeedbackCard
                     answered={answered}
-                    isCorrect={selected === questions[currentIndex]}
+                    isCorrect={selected === questions[currentIndex]?.correct_option}
                     explanation={questions[currentIndex]?.explanation}
                     isLast={currentIndex+1 >= questions.length}
                     onContinue={handleContinue}
