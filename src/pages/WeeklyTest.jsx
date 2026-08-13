@@ -64,7 +64,7 @@ function WeeklyTest(){
         //check accuracy gate
         const notReady = week.chapters.filter(chapter => {
             const row = progress.find(p => p.chapter === chapter)
-            return !row || row.accuracy < 10
+            return !row || row.accuracy < 70
         })
 
         if (notReady.length > 0) {
