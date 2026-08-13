@@ -11,6 +11,11 @@ function Practice(){
     const subject = searchParams.get('subject')
     const chapter = searchParams.get('chapter')
 
+    const correctSound = new Audio('/sounds/correct.wav')
+    const wrongSound = new Audio('/sounds/wrong.wav')
+    const completeSound = new Audio('/sounds/complete.wav')
+    
+
     const [questions, setQuestions] = useState([])
     const [currentIndex, setCurrentIndex] = useState(0)
     const [selected, setSelected]= useState(null)
@@ -44,6 +49,9 @@ function Practice(){
         const isCorrect = option === questions[currentIndex].correct_option
         if (isCorrect){
         setScore(prev => prev + 1)
+        correctSound.play()
+        }else{
+            wrongSound.play()
         }
         saveProgress(isCorrect)
         updateStreak()
@@ -147,9 +155,10 @@ const stars = accuracy > 80 ? 3 : accuracy > 50 ? 2 : 1
 
     //final score screen
    if(!loading && currentIndex >= questions.length){
+    completeSound.play()
     return(
-        
-        <div className="min-h-screen bg-[#cae9ff] px-4 py-6 flex flex-col justify-between">
+        <div className="bg-[#cae9ff] min-h-screen">
+        <div className="min-h-screen bg-[#cae9ff] max-w-md mx-auto px-4 py-6 flex flex-col justify-between">
         
             {/* Top section */}
             <div className="flex flex-col items-center gap-4 mt-8">
@@ -209,6 +218,7 @@ const stars = accuracy > 80 ? 3 : accuracy > 50 ? 2 : 1
                         Back to waves
                 </button>
             </div>
+        </div>
         </div>
         )
     }

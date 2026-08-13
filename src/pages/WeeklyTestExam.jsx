@@ -14,6 +14,10 @@ function WeeklyTestExam(){
     const [searchParams] = useSearchParams()
     const weekNumber = parseInt(searchParams.get('week'))
 
+    const correctSound = new Audio('/sounds/correct.wav')
+    const wrongSound = new Audio('/sounds/wrong.wav')
+    const completeSound = new Audio('/sounds/complete.wav')
+
     const [questions, setQuestions] = useState([])
     const [selected, setSelected] = useState(null)
     const [answered, setAnswered] = useState(false)
@@ -51,6 +55,9 @@ function WeeklyTestExam(){
         setAnswered(true)
         if(option === questions[currentIndex].correct_option) {
             setScore(prev => prev + 1)
+            correctSound.play()
+        }else{
+            wrongSound.play()
         }   
     }
 
@@ -75,9 +82,12 @@ function WeeklyTestExam(){
     const accuracy = Math.round((score/questions.length) * 100)
     const stars = accuracy > 80 ? 3 : accuracy > 50 ? 2 : 1
 
-    if (finished) return(
-    
-        <div className="min-h-screen bg-[#cae9ff] px-4 py-6 flex flex-col justify-between">
+    if (finished) {
+        completeSound.play()
+        return(
+
+        <div className="bg-[#cae9ff] min-h-screen">
+        <div className="min-h-screen bg-[#cae9ff] max-w-md mx-auto px-4 py-6 flex flex-col justify-between">
         
             {/* Top section */}
             <div className="flex flex-col items-center gap-4 mt-8">
@@ -121,8 +131,9 @@ function WeeklyTestExam(){
                 </button>
             </div>
         </div>
+        </div>
     
-    )
+    )}
 
     return(
         <div className="bg-white min-h-screen px-2 py-2">
