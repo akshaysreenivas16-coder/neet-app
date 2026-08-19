@@ -10,6 +10,7 @@ function Practice(){
     const [searchParams]= useSearchParams() // to read the values from url 
     const subject = searchParams.get('subject')
     const chapter = searchParams.get('chapter')
+    const waveNumber = searchParams.get('wave')
 
     const correctSound = new Audio('/sounds/correct.wav')
     const wrongSound = new Audio('/sounds/wrong.wav')
@@ -18,11 +19,12 @@ function Practice(){
 
     const [questions, setQuestions] = useState([])
     const [currentIndex, setCurrentIndex] = useState(0)
-    const [selected, setSelected]= useState(null)
-    const [answered, setAnswered]= useState(false)
-    const [score, setScore]= useState(0)
+    const [selected, setSelected] = useState(null)
+    const [answered, setAnswered] = useState(false)
+    const [score, setScore] = useState(0)
     const [streak, setStreak] = useState(0)
-    const [loading, setloading]=useState(true)
+    const [loading, setloading] = useState(true)
+    const [waveSaved, setWaveSaved] = useState(false)  
     const from = parseInt(searchParams.get('from')) || 0
     const to = parseInt(searchParams.get('to')) || 10
 
@@ -48,8 +50,8 @@ function Practice(){
         setAnswered(true)
         const isCorrect = option === questions[currentIndex].correct_option
         if (isCorrect){
-        setScore(prev => prev + 1)
-        correctSound.play()
+            setScore(prev => prev + 1)
+            correctSound.play()
         }else{
             wrongSound.play()
         }
@@ -107,6 +109,23 @@ function Practice(){
     }
 }
 
+//saving stars
+async function saveWaveProgress(starsEarned) {
+    const { data: {user}} = await supabase.auth.getUser()
+    if (!user) return
+
+    await supabase.from('wave_progress').upsert({
+        user_id: user.id,
+        subject: subject,
+        chapter: chapter,
+        wave_number: parseInt(waveNumber),
+        stars: starsEarned,
+        completed: true
+    },{ onConflict: 'user_id,subject,chapter,wave_number'})
+
+}
+
+
 //streak
 async function updateStreak() {
     const {data:{user}} = await supabase.auth.getUser()
@@ -156,6 +175,11 @@ const stars = accuracy > 80 ? 3 : accuracy > 50 ? 2 : 1
     //final score screen
    if(!loading && currentIndex >= questions.length){
     completeSound.play()
+    if(!waveSaved){
+        setWaveSaved(true)
+        saveWaveProgress(stars)
+    }
+   
     return(
         <div className="bg-[#cae9ff] min-h-screen">
         <div className="min-h-screen bg-[#cae9ff] max-w-md mx-auto px-4 py-6 flex flex-col justify-between">
