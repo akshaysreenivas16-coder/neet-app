@@ -174,9 +174,9 @@ const stars = accuracy > 80 ? 3 : accuracy > 50 ? 2 : 1
 
     //final score screen
    if(!loading && currentIndex >= questions.length){
-    completeSound.play()
     if(!waveSaved){
         setWaveSaved(true)
+        completeSound.play()
         saveWaveProgress(stars)
     }
    

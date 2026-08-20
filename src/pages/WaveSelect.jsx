@@ -11,19 +11,31 @@ function WaveSelect(){
     const chapter = searchParams.get('chapter')
     const [totalQuestions, setTotalQuestion] =  useState(0)
     const [loading , setLoading] = useState(true)
+    const [waveProgress, setWaveProgress] =  useState([])
 
     useEffect(()=>{
-        async function fetchCount() {
-            const{data} = await supabase
+        async function fetchData() {
+            const{ data: questions} = await supabase
                 .from('questions')
                 .select('id')
                 .eq('subject', subject.toLowerCase())
                 .eq('chapter', chapter)
     
-            setTotalQuestion(data.length)
+            setTotalQuestion(questions.length)
+            
+            const {data : {user} } = await supabase.auth.getUser()
+
+            const { data : progress } = await supabase
+                .from('wave_progress')
+                .select('*')
+                .eq('user_id', user.id)
+                .eq('subject', subject)
+                .eq('chapter', chapter)
+
+            setWaveProgress(progress || [])    
             setLoading(false) 
         }
-        fetchCount()
+        fetchData()
     },[subject, chapter])
 
     function getWaveRanges(){
@@ -46,21 +58,61 @@ function WaveSelect(){
         </div>
     )
     return(
-        <div className="bg-[#cae9ff] min-h-screen px-2 py-6 ">
-            <div className="bg-white p-3 rounded-2xl max-w-md mx-auto">
-                <div className="flex items-center justify-between max-w-md mx-auto pb-8">
-                    <h1 className="text-[#1b4965] text-lg font-bold">{chapter}</h1>
-                    <button onClick={()=>navigate(`/chapters/${subject}`)}>< X size={24}/></button>
+        <div className="bg-[#cae9ff] min-h-screen px-2 py-6">
+            <div className="max-w-md mx-auto">
+
+                {/* Header */}
+                <div className="flex items-center justify-between mb-5">
+                    <div>
+                        <p className="text-sm text-gray-400 upercase tracking-widest">{subject}</p>
+                        <h1 className="text-[#1b4965] text-lg font-bold">{chapter}</h1>
+                    </div>
+                    <button onClick={()=>navigate(`/chapters/${subject}`)}>
+                        <X size={24}  className="text-[#1b4965]"/>
+                    </button>
                 </div>
-                <div className="max-w-md mx-auto space-y-1.5">
-                    <p className="pb-3 text-[#1b4965] font-bold">Choose your wave</p>
-                    {getWaveRanges().map(({ wave, from, to })=>(
-                        <button key={wave}
-                        onClick={()=>navigate(`/practice?subject=${subject}&chapter=${chapter}&wave=${wave}&from=${from}&to=${to}`)}
-                        className="bg-white flex rounded-2xl w-full p-4 text-[#1b4965] font-bold ring-2 ring-[#5fa8d3]/30 hover:bg-[#cae9ff] transition">
-                        Wave {wave} - ({to - from} questions)
-                        </button>
-                    ))}
+                <hr className="mb-15 bg-[#1b4965]"></hr>
+
+                {/* Wave map */}  
+                <div className="relative flex flex-col items-center gap-6">
+                    {getWaveRanges().map(({wave, from, to})=>{
+                        const progress = waveProgress?.find( p=> p.wave_number === wave)
+                        const isCompleted = progress?.completed || false
+                        const stars = progress?.stars || 0 
+                        const islocked = wave > 1 && !waveProgress.find(p => p.wave_number === wave - 1)?.completed
+                    
+                        const position = wave % 2 === 0 ? 'self-end mr-8' : 'self-start ml-8'
+                        
+                        return(
+                            <div key={wave} className={`relative flex flex-col items-center ${position} z-10`}>
+                                
+                                {/* Bubble */}
+                                <button 
+                                    onClick={() =>
+                                    !islocked && navigate(`/practice?subject=${subject}&chapter=${chapter}&wave=${wave}&from=${from}&to=${to}`)}
+                                    className={`w-20 h-20 rounded-full flex items-center justify-center shadow-lg text-white font-bold text-lg transition
+                                        ${islocked?'bg-[#94a3b8] cursor-not-allowed': isCompleted ? 'bg-[#62b6cb]': 'bg-[#1b4965]'}`}>
+                                {islocked? '🔒' : wave }
+                                </button>
+
+                                {/* Stars */}
+                                <div className="absolute -top-3 w-20 h-20 pointer-events-none">
+                                    {/* Left star */}
+                                    <span className={`absolute text-lg ${1 <= stars? 'opacity-100' : 'opacity-20'}`}
+                                        style={{top: '-1px', left: '-10px'}}>⭐</span>
+                                    {/* Middle star */}
+                                    <span className={`absolute text-lg ${2 <= stars? 'opacity-100' : 'opacity-20'}`}
+                                        style={{top: '-15px', left: '50%', transform: 'translateX(-50%)'}}>⭐</span>
+                                    {/* Right star */}
+                                    <span className={`absolute text-lg ${3 <= stars? 'opacity-100' : 'opacity-20'}`}
+                                        style={{top: '-1px', right: '-10px'}}>⭐</span>
+                                </div> 
+
+                                <p className="text-xs font-semibold text-[#1b4965]/60 mt-1">wave {wave}</p>
+
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         </div>

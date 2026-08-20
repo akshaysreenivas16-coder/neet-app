@@ -89,7 +89,7 @@ function Navbar(){
                 </div>
             </div>
             {/* Bottom bar - mobile only */}
-                <div className="fixed bottom-0 right-0 left-0 bg-[#1b4965] flex justify-around items-center py-3 md:hidden">
+                <div className="fixed bottom-0 right-0 left-0 bg-[#1b4965] flex justify-around items-center py-3 md:hidden z-50">
                     <button 
                         onClick={()=>navigate('/subject')}
                         className={`flex flex-col items-center  px-2 py-2 rounded-full text-xs text-medium gap-2 transition ${
